@@ -14,3 +14,5 @@ function Destaques() {
 
     );
 }
+
+export default Destaques; 
