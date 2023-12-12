@@ -1,4 +1,6 @@
-//import logo from './logo.svg';
+import logo from './imagens/sitio.svg';
+import search from './imagens/search.svg'
+
 
 function Menu() {
   return (
@@ -6,9 +8,9 @@ function Menu() {
       <div id="navBar">
       <div class="row" id="menu">
         <div class="col-lg-3 tab">
-         <img src="imagens/sitio.svg" alt="sitio"></img>
+         <img src={logo} alt="sitio"></img>
           <button id="localButton">Coimbra</button>
-          <img src="imagens/search.svg" alt="search"></img>
+          <img src={search} alt="search"></img>
         </div>
         <div class="col-lg-3 tab" id="navLinks">
           <nav>
@@ -23,7 +25,7 @@ function Menu() {
         </div>
       </div>
     </div>
- 
+
     </div>
   );
 }
