@@ -1,9 +1,7 @@
 import logo from "../imagens/sitio.svg";
 import search from "../imagens/search.svg";
 
-import { Link } from "react-router-dom";
-
-function Menu() {
+function Artistas() {
   return (
     <div id="navBar">
       <div className="row" id="menu">
@@ -13,19 +11,19 @@ function Menu() {
           <img src={search} alt="search"></img>
         </div>
         <div className="col-lg-3 tab" id="navLinks">
-          <Link to="/galerias">
+          <a href="#galerias">
             <h5>galerias</h5>
-          </Link>
-          <Link to="/artistas">
+          </a>
+          <a href="#artistas">
             <h5>artistas</h5>
-          </Link>
-          <Link to="/agenda">
+          </a>
+          <a href="#agenda">
             <h5>agenda</h5>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
   );
 }
 
-export default Menu;
+export default Artistas;

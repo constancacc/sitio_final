@@ -2,6 +2,7 @@
 body {
   font-family: "Bellota Text", sans-serif;
   color: #000000;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -37,6 +38,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
+  /* margin-bottom: 5vh; */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -46,14 +48,14 @@ h6 {
   gap: 2em;
 }
 
-.tab > a {
+.tab > * {
   margin-left: auto;
   padding: 0 4%;
   text-decoration: none;
   color: #000000;
 }
 
-.tab > a:hover {
+.tab > *:hover {
   background-color: #f89668;
 }
 
@@ -75,9 +77,8 @@ h6 {
 }
 
 /*Footer*/
-
 #footer {
-  margin-top: 5vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: space-between;
   padding: 0 2%;

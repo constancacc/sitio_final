@@ -9,6 +9,7 @@ function Destaques() {
   return (
     <div className="PagDestaques">
       <Menu />
+
       <div className="row">
         <div className="col-lg-1"></div>
         <div className="row col-lg-11">
