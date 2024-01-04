@@ -1,8 +1,16 @@
-.artista-list-element {
+.artista-list-element h1 {
   padding: 0 2%;
+}
+
+.artista-list-element:hover {
+  background-color: #cee6c0;
 }
 
 hr {
   margin: 0;
   padding: 0;
+}
+
+.tab > .nav-link:hover {
+  background-color: #cee6c0;
 }
