@@ -1,20 +1,25 @@
-import logo from '../imagens/sitio.svg';
-import search from '../imagens/search.svg'
-
+import logo from "../imagens/sitio.svg";
+import search from "../imagens/search.svg";
 
 function Menu() {
   return (
-      <div id="navBar">
-      <div class="row" id="menu">
-        <div class="col-lg-3 tab">
-         <img src={logo} alt="sitio"></img>
+    <div id="navBar">
+      <div className="row" id="menu">
+        <div className="col-lg-3 tab">
+          <img src={logo} alt="sitio"></img>
           <button id="localButton">Coimbra</button>
           <img src={search} alt="search"></img>
         </div>
-        <div class="col-lg-3 tab" id="navLinks">
+        <div className="col-lg-3 tab" id="navLinks">
+          <a href="#galerias">
             <h5>galerias</h5>
+          </a>
+          <a href="#artistas">
             <h5>artistas</h5>
+          </a>
+          <a href="#agenda">
             <h5>agenda</h5>
+          </a>
         </div>
       </div>
     </div>

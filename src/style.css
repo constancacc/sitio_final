@@ -1,6 +1,6 @@
 /*Geral*/
 body {
-  font-family: 'Bellota Text', sans-serif;
+  font-family: "Bellota Text", sans-serif;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ h6 {
 }
 
 /*Menu*/
-#menu{
+#menu {
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
@@ -43,15 +43,17 @@ h6 {
 .tab {
   display: flex;
   align-items: center;
-  gap: 2em; 
+  gap: 2em;
 }
 
-.tab > nav {
+.tab > a {
   margin-left: auto;
   padding: 0 4%;
+  text-decoration: none;
+  color: #000000;
 }
 
-.tab > nav:hover {
+.tab > a:hover {
   background-color: #f89668;
 }
 
@@ -67,28 +69,22 @@ h6 {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #F89668;
+  background-color: #f89668;
   border: none;
   font-size: 2vmin;
 }
 
 /*Footer*/
 
-#footer{
+#footer {
+  margin-top: 5vh;
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
-  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.textfooter{
-  font-size: 1.7vmin;
-}
-
-#footerContact{
+#footerContact {
   display: inline-flex;
   justify-content: right;
 }
-
-
-
