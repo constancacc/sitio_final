@@ -1,49 +1,48 @@
-.rect1{
-    width: 8%;
-    height: 5%;
-    background-color:#F89668;
-    position: absolute;
-    z-index: -1;
-    top: 18%;
-    left: 19%;
+.rect1 {
+  width: 8%;
+  height: 5%;
+  background-color: #f89668;
+  position: absolute;
+  z-index: -1;
+  top: 18%;
+  left: 19%;
 }
 
-.rect2{
-    width: 8%;
-    height: 5%;
-    background-color:#CEE6C0;
-    position: absolute;
-    z-index: -1;
-    top: 82%;
-    left: 22%;
+.rect2 {
+  width: 8%;
+  height: 5%;
+  background-color: #cee6c0;
+  position: absolute;
+  z-index: -1;
+  top: 82%;
+  left: 22%;
 }
 
-.rect3{
-    width: 8%;
-    height: 5%;
-    background-color:#8AB2DD;
-    position: absolute;
-    z-index: -1;
-    top: 95%;
-    left: 25.5%;
+.rect3 {
+  width: 8%;
+  height: 5%;
+  background-color: #8ab2dd;
+  position: absolute;
+  z-index: -1;
+  top: 95%;
+  left: 25.5%;
 }
 
-.galeria{
-    padding: 0 10%;
+.galeria {
+  padding: 0 10%;
 }
 
-.dados{
-    display: inline-flex;
+.dados {
+  display: inline-flex;
 }
 
-.artistas{
-    width:100%;
-    background-color: #CEE6C0;
+.artistas {
+  width: 100%;
+  background-color: #cee6c0;
 }
 
-    
-.expoDestaque{
-    background-color: #8AB2DD;
-    display: grid;
-    padding: 0;
+.expoDestaque {
+  background-color: #8ab2dd;
+  display: grid;
+  padding: 0;
 }
