@@ -1,6 +1,7 @@
 import "./css/destaques.css";
 
 import Carousel1 from "./componentes/Carousel1";
+import Carousel2 from "./componentes/Carousel2";
 import Carousel3 from "./componentes/Carousel3";
 
 function Destaques() {
@@ -87,7 +88,8 @@ function Destaques() {
           </div>
         </div>
       </div>
-      <div className="row artistas"></div>
+
+      <Carousel2 />
 
       <div className="row">
         <div className="col-lg-1"></div>
@@ -129,6 +131,8 @@ function Destaques() {
                     <p>data da exposição</p>
                 </div>
             </div> */}
+           
+             
     </div>
   );
 }

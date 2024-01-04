@@ -24,8 +24,8 @@ const Carousel = () => {
   return (
     <Slider {...settings}>
       <div className="carousel-item">
-        <div className="carousel-content2">
-          <tab className="col-lg-9 tabLink">
+        <div className="carousel-content3">
+          <div className="col-lg-9 tabLink">
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -43,13 +43,13 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 
       <div className="carousel-item">
-        <div className="carousel-content2">
-          <tab className="col-lg-9 tabLink">
+        <div className="carousel-content3">
+          <div className="col-lg-9 tabLink">
             <img src={exposicao} alt='exposicao' />
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -67,13 +67,13 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 
       <div className="carousel-item">
-        <div className="carousel-content2">
-          <tab className="col-lg-9 tabLink">
+        <div className="carousel-content3">
+          <div className="col-lg-9 tabLink">
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -85,13 +85,13 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 
       <div className="carousel-item">
-        <div className="carousel-content2">
-          <tab className="col-lg-9 tabLink">
+        <div className="carousel-content3">
+          <div className="col-lg-9 tabLink">
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -109,7 +109,7 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 

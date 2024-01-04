@@ -25,7 +25,7 @@ const Carousel = () => {
     <Slider {...settings}>
       <div className="carousel-item">
         <div className="carousel-content">
-          <tab className="col-lg-9 tabLink">
+          <div className="col-lg-9 tabLink">
             <img src={galeria} />
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -43,13 +43,13 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 
       <div className="carousel-item">
         <div className="carousel-content">
-          <tab className="col-lg-9 tabLink">
+          <div className="col-lg-9 tabLink">
             <img src={galeria} />
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -67,13 +67,13 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 
       <div className="carousel-item">
         <div className="carousel-content">
-          <tab className="col-lg-9 tabLink">
+          <div className="col-lg-9 tabLink">
             <img src={galeria} />
             <div className="galeria">
               <h4>Nome da Galeria</h4>
@@ -91,7 +91,7 @@ const Carousel = () => {
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
-          </tab>
+          </div>
         </div>
       </div>
 

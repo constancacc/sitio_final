@@ -1,0 +1,11 @@
+.container{
+    width: 100%;
+    background-color: #CEE6C0;
+    column-count: 6;
+    column-gap: 0.1vw;
+}
+
+.image{
+    padding: 1%;
+}
+
