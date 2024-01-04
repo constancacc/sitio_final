@@ -6,13 +6,12 @@
   
   .carousel-item {
     outline: none;
-    
+    margin-right: -15px;
   }
   
-  .carouselcontent2 {
-    width: 30%;
-    background-color: #8AB2DD;
-    
+  .carousel-content2 {
+    width: 97%;
+    background-color: #8AB2DD; 
   }
   
   .tabLink {
