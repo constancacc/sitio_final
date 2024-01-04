@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/Carousel2.css"; // Importe um arquivo de estilo para personalização opcional
+import "../css/Carousel3.css"; // Importe um arquivo de estilo para personalização opcional
 
-import exposicao from './imagens/exposicao.png';
-import location from './imagens/location.svg';
-import clock from './imagens/Clock.svg';
+import exposicao from '../imagens/exposicao.png';
+import location from '../imagens/location.svg';
+import clock from '../imagens/Clock.svg';
 
 const Carousel = () => {
   const settings = {

@@ -1,7 +1,7 @@
 import "./css/destaques.css";
 
 import Carousel1 from "./componentes/Carousel1";
-import Carousel2 from "./componentes/Carousel2";
+import Carousel3 from "./componentes/Carousel3";
 
 function Destaques() {
   return (
@@ -98,7 +98,7 @@ function Destaques() {
           </div>
         </div>
       </div>
-      <Carousel2 />
+      <Carousel3 />
 
       {/* <div className="row tab1">
                 <div className="col-lg-1"></div>
