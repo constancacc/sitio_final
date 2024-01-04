@@ -2,12 +2,13 @@ import "./css/destaques.css";
 
 import Menu from "./componentes/Menu.js";
 import Footer from "./componentes/Footer.js";
+
 import Carousel1 from "./componentes/Carousel1";
 import Carousel3 from "./componentes/Carousel3";
 
 function Destaques() {
   return (
-    <div className="PagDestaques">
+    <div id="PagDestaques">
       <Menu />
 
       <div className="row">

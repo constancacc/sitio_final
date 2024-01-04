@@ -48,14 +48,14 @@ h6 {
   gap: 2em;
 }
 
-.tab > * {
+.tab > .nav-link {
   margin-left: auto;
   padding: 0 4%;
   text-decoration: none;
   color: #000000;
 }
 
-.tab > *:hover {
+.tab > .nav-link:hover {
   background-color: #f89668;
 }
 
@@ -78,6 +78,8 @@ h6 {
 
 /*Footer*/
 #footer {
+  position: sticky;
+  bottom: 0;
   margin-top: 10vh;
   display: flex;
   justify-content: space-between;

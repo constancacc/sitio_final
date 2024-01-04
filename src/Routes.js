@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Footer from "./componentes/Footer.js";
+import Artistas from "./paginas/Artistas.js";
 import Destaques from "./Destaques.js";
 
 function AppRoutes() {
@@ -7,7 +7,7 @@ function AppRoutes() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Destaques />}></Route>
-        <Route exact path="/artistas" element={<Footer />}></Route>
+        <Route exact path="/artistas" element={<Artistas />}></Route>
       </Routes>
     </Router>
   );

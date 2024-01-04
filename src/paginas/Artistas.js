@@ -1,27 +1,43 @@
-import logo from "../imagens/sitio.svg";
-import search from "../imagens/search.svg";
+import Menu from "../componentes/Menu.js";
+import Footer from "../componentes/Footer.js";
+
+import "../css/artistas.css";
 
 function Artistas() {
   return (
-    <div id="navBar">
-      <div className="row" id="menu">
-        <div className="col-lg-3 tab">
-          <img src={logo} alt="sitio"></img>
-          <button id="localButton">Coimbra</button>
-          <img src={search} alt="search"></img>
-        </div>
-        <div className="col-lg-3 tab" id="navLinks">
-          <a href="#galerias">
-            <h5>galerias</h5>
-          </a>
-          <a href="#artistas">
-            <h5>artistas</h5>
-          </a>
-          <a href="#agenda">
-            <h5>agenda</h5>
-          </a>
+    <div id="PagDestaques">
+      <Menu />
+      <div className="row artista-list-element">
+        <div className="col-xs-12">
+          <h1>Nome Artista</h1>
+          <hr />
         </div>
       </div>
+      <div className="row artista-list-element">
+        <div className="col-xs-12">
+          <h1>Nome Artista</h1>
+          <hr />
+        </div>
+      </div>
+      <div className="row artista-list-element">
+        <div className="col-xs-12">
+          <h1>Nome Artista</h1>
+          <hr />
+        </div>
+      </div>
+      <div className="row artista-list-element">
+        <div className="col-xs-12">
+          <h1>Nome Artista</h1>
+          <hr />
+        </div>
+      </div>
+      <div className="row artista-list-element">
+        <div className="col-xs-12">
+          <h1>Nome Artista</h1>
+          <hr />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
