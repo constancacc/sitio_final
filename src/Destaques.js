@@ -1,30 +1,24 @@
-import './css/destaques.css';
+import "./css/destaques.css";
 
-
-
-import Carousel1 from './Carousel1';
-import Carousel2 from './Carousel2';
-
+import Carousel1 from "./componentes/Carousel1";
+import Carousel2 from "./componentes/Carousel2";
 
 function Destaques() {
+  return (
+    <div className="PagDestaques">
+      <div className="row">
+        <div className="col-lg-1"></div>
+        <div className="row col-lg-11">
+          <div className="title">
+            <h3 className="galPrin">Galerias Principais</h3>
+            <div className="rect1"></div>
+          </div>
+        </div>
+      </div>
 
+      <Carousel1 />
 
-    return (
-        <div className="PagDestaques">
-
-            <div className="row">
-                <div className="col-lg-1"></div>
-                <div className="row col-lg-11">
-                    <div className="title">
-                        <h3 className="galPrin">Galerias Principais</h3>
-                        <div className="rect1"></div>
-                    </div>
-                </div>
-            </div>
-
-            <Carousel1 />
-
-            {/* <Carousel
+      {/* <Carousel
                 onChange={onChange}
                 onClickItem={onClickItem}
                 onClickThumb={onClickThumb}
@@ -84,31 +78,29 @@ function Destaques() {
 
             </Carousel> */}
 
-            <div className="row">
-                <div className="col-lg-1"></div>
-                <div className="row col-lg-11">
-                    <div className="title">
-                        <h3 className="galPrin">Artistas em Destaque</h3>
-                        <div className="rect2"></div>
-                    </div>
-                </div>
-            </div>
-            <div className="row artistas">
+      <div className="row">
+        <div className="col-lg-1"></div>
+        <div className="row col-lg-11">
+          <div className="title">
+            <h3 className="galPrin">Artistas em Destaque</h3>
+            <div className="rect2"></div>
+          </div>
+        </div>
+      </div>
+      <div className="row artistas"></div>
 
-            </div>
+      <div className="row">
+        <div className="col-lg-1"></div>
+        <div className="row col-lg-11">
+          <div className="title">
+            <h3 className="galPrin">Exposições em Destaque</h3>
+            <div className="rect3"></div>
+          </div>
+        </div>
+      </div>
+      <Carousel2 />
 
-            <div className="row">
-                <div className="col-lg-1"></div>
-                <div className="row col-lg-11">
-                    <div className="title">
-                        <h3 className="galPrin">Exposições em Destaque</h3>
-                        <div className="rect3"></div>
-                    </div>
-                </div>
-            </div>
-            <Carousel2 />
-
-            {/* <div className="row tab1">
+      {/* <div className="row tab1">
                 <div className="col-lg-1"></div>
                 <div className="col-lg-3 expoDestaque">
                     <img src={exposicao} alt="exposicao" />
@@ -137,9 +129,8 @@ function Destaques() {
                     <p>data da exposição</p>
                 </div>
             </div> */}
-        </div>
-
-    );
+    </div>
+  );
 }
 
-export default Destaques; 
+export default Destaques;

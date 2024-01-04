@@ -1,6 +1,6 @@
-import logo from './imagens/sitio.svg';
-import mail from './imagens/mail.svg';
-import phone from './imagens/phone.svg';
+import logo from '../imagens/sitio.svg';
+import mail from '../imagens/mail.svg';
+import phone from '../imagens/phone.svg';
 
 function Footer() {
     return (
