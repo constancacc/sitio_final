@@ -1,0 +1,36 @@
+
+.slick-slider {
+    width: 100%;
+    
+  }
+  
+  .carousel-item {
+    outline: none;
+    
+  }
+  
+  .carouselcontent2 {
+    width: 30%;
+    background-color: #8AB2DD;
+    
+  }
+  
+  .tabLink {
+    display: grid;
+    padding: 0;
+  }
+  
+  .linha {
+    width: 100%;
+    color: #000000;
+  }
+  
+  .galeria {
+    padding: 0 10%;
+  }
+  
+  .dados {
+    display: inline-flex;
+  }
+  
+  /* Adicione mais estilos conforme necessário */
