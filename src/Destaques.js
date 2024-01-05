@@ -137,7 +137,7 @@ function Destaques() {
                 </div>
             </div> */}
            
-             
+             <Footer />
     </div>
   );
 }
