@@ -29,17 +29,11 @@ const Carousel = () => {
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -53,17 +47,11 @@ const Carousel = () => {
             <img src={exposicao} alt='exposicao' />
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -77,11 +65,11 @@ const Carousel = () => {
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr style={{ color: '#000000', backgroundColor: '#000000', height: 0.5 }} />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -95,17 +83,11 @@ const Carousel = () => {
             <img src={exposicao} alt='exposicao'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock" className="icons" />
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>

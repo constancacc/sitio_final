@@ -1,11 +1,7 @@
-.container{
-    width: 100%;
-    background-color: #CEE6C0;
-    column-count: 6;
-    column-gap: 0.1vw;
-}
+/* Carousel2.css */
 
-.image{
-    padding: 1%;
-}
-
+.image-gallery-container {
+    background-color: #CEE6C0; /* Replace with your desired background color */
+    
+  }
+  

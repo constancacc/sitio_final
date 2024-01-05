@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/Carousel1.css"; // Importe um arquivo de estilo para personalização opcional
+import "../css/Carousel1.css"; 
 
 import galeria from "../imagens/galeria.png";
 import location from "../imagens/location.svg";
@@ -25,21 +25,15 @@ const Carousel = () => {
     <Slider {...settings}>
       <div className="carousel-item">
         <div className="carousel-content">
-          <div className="col-lg-9 tabLink">
-            <img src={galeria} />
+          <div className="col-lg-9">
+            <img src={galeria} alt='galeria'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons" />
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock"  className="icons" />
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -50,20 +44,14 @@ const Carousel = () => {
       <div className="carousel-item">
         <div className="carousel-content">
           <div className="col-lg-9 tabLink">
-            <img src={galeria} />
+            <img src={galeria} alt='galeria'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -74,20 +62,14 @@ const Carousel = () => {
       <div className="carousel-item">
         <div className="carousel-content">
           <div className="col-lg-9 tabLink">
-            <img src={galeria} />
+            <img src={galeria} alt='galeria'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr
-                style={{
-                  color: "#000000",
-                  backgroundColor: "#000000",
-                  height: 0.5,
-                }}
-              />
+              <hr />
               <div className="dados">
-                <img src={location} alt="location" />
+                <img src={location} alt="location" className="icons"/>
                 <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" />
+                <img src={clock} alt="clock"className="icons" />
                 <p>Rua de Miguel Bombarda</p>
               </div>
             </div>
@@ -95,7 +77,6 @@ const Carousel = () => {
         </div>
       </div>
 
-      {/* Adicione mais itens conforme necessário */}
     </Slider>
   );
 };

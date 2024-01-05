@@ -1,23 +1,16 @@
 
 .slick-slider {
   width: 100%;
-  
-}
-
-.carousel-item {
-  outline: none;
-  
 }
 
 .carousel-content {
   width: 99%;
   background-color: #F89668;
-  
 }
 
-.tabLink {
-  display: grid;
-  padding: 0;
+.icons{
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .linha {
@@ -33,4 +26,7 @@
   display: inline-flex;
 }
 
-/* Adicione mais estilos conforme necessário */
+hr{
+  border-top: "5px";
+  color: '#303E4D';
+}
