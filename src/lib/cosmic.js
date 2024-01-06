@@ -15,3 +15,14 @@ export async function getAllArtists() {
   // .depth(1);
   return data.objects;
 }
+
+export async function getAllGalleries() {
+  const data = await cosmic.objects
+    .find({ type: "galerias" })
+    .props("id,slug,title,metadata");
+  // .depth(1);
+  return data.objects;
+}
+
+
+

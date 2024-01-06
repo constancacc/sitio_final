@@ -1,0 +1,27 @@
+.galeria-list-element h1 {
+    padding: 0 2%;
+  }
+  
+  .galeria-list-element:hover {
+    background-color: #F89668;
+  }
+  
+  hr {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .galeria-imagem {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  /* .tab > .nav-link:hover {
+    background-color: #cee6c0;
+  } */
+  

@@ -1,11 +1,11 @@
-import "./css/destaques.css";
+import "../css/destaques.css";
 
-import Menu from "./componentes/Menu.js";
-import Footer from "./componentes/Footer.js";
+import Menu from "../componentes/Menu.js";
+import Footer from "../componentes/Footer.js";
 
-import Carousel1 from "./componentes/Carousel1";
-import Carousel2 from "./componentes/Carousel2";
-import Carousel3 from "./componentes/Carousel3";
+import Carousel1 from "../componentes/Carousel1.js";
+import Carousel2 from "../componentes/Carousel2.js";
+import Carousel3 from "../componentes/Carousel3.js";
 
 function Destaques() {
   return (
