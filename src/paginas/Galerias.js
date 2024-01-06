@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { getAllGalleries } from "../lib/cosmic.js";
 
+import { Link } from "react-router-dom";
+
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
 import location from '../imagens/location.svg';
 import clock from '../imagens/Clock.svg';
+import arrow from '../imagens/arrow.svg';
 
 import "../css/galerias.css";
 
@@ -72,11 +75,15 @@ function Galerias() {
             {selectedIndex === post.id && (
               <div className="galeria-list-element-expanded">
                 <div className="galeria-list-content-expanded">
-                <img src={location} alt="location" className="icons"/>
+                  <img src={location} alt="location" className="icons" />
                   <p>{post.metadata.localizacao_galeria}</p>
-                  <img src={clock} alt="clock" className="icons"/>
+                  <img src={clock} alt="clock" className="icons" />
                   <p>{post.metadata.horario_galeria}</p>
+                  <Link to="/galeria" className="button-link">
+                    <img src={arrow} alt="arrow" className="button" />
+                  </Link>
                 </div>
+
               </div>
             )}
 
