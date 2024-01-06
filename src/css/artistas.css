@@ -11,6 +11,16 @@ hr {
   padding: 0;
 }
 
+.artista-imagem {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 1;
+}
+
 /* .tab > .nav-link:hover {
   background-color: #cee6c0;
 } */
