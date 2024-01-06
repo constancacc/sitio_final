@@ -12,6 +12,8 @@
   .carousel-content3 {
     width: 97%;
     background-color: #8AB2DD; 
+    display: flex;
+    align-items: center;
   }
   
   .tabLink {
@@ -32,4 +34,4 @@
     display: inline-flex;
   }
   
-  /* Adicione mais estilos conforme necessário */
+  /* Adicione mais estilos conforme necessário */ 

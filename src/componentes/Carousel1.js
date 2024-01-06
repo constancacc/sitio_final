@@ -7,6 +7,7 @@ import "../css/Carousel1.css";
 import galeria from "../imagens/galeria.png";
 import location from "../imagens/location.svg";
 import clock from "../imagens/Clock.svg";
+import Divider from "./Divider.js";
 
 const Carousel = () => {
   const settings = {
@@ -23,13 +24,14 @@ const Carousel = () => {
 
   return (
     <Slider {...settings}>
-      <div className="carousel-item">
+      {[...Array(3)].map((_, index) => (
+      <div key={index} className="carousel-item">
         <div className="carousel-content">
           <div className="col-lg-9">
             <img src={galeria} alt='galeria'/>
             <div className="galeria">
               <h4>Nome da Galeria</h4>
-              <hr />
+              <Divider />
               <div className="dados">
                 <img src={location} alt="location" className="icons" />
                 <p>Rua de Miguel Bombarda</p>
@@ -41,41 +43,7 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className="carousel-item">
-        <div className="carousel-content">
-          <div className="col-lg-9 tabLink">
-            <img src={galeria} alt='galeria'/>
-            <div className="galeria">
-              <h4>Nome da Galeria</h4>
-              <hr />
-              <div className="dados">
-                <img src={location} alt="location" className="icons"/>
-                <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock" className="icons"/>
-                <p>Rua de Miguel Bombarda</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="carousel-item">
-        <div className="carousel-content">
-          <div className="col-lg-9 tabLink">
-            <img src={galeria} alt='galeria'/>
-            <div className="galeria">
-              <h4>Nome da Galeria</h4>
-              <hr />
-              <div className="dados">
-                <img src={location} alt="location" className="icons"/>
-                <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock"className="icons" />
-                <p>Rua de Miguel Bombarda</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
 
     </Slider>
   );

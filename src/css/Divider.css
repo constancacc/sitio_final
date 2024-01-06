@@ -1,0 +1,12 @@
+
+  .custom-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .line {
+    flex-grow: 1;
+    border: 0.5px solid #25252533; 
+  }
+  
