@@ -1,222 +1,264 @@
 
+
 /*----------- DESKTOP ---------------*/
 
-body{
-    margin:0;
-    overflow-x: hidden;
+.body{
+  margin:0;
+  overflow-x: hidden;
 }
 
 /* DENTRO DA GRELHA */
 #logo-mapa svg{
-    margin: 1% auto;
-    }
-    
-/*FORA DA GRELHA - POP-UP*/
-    
+  margin: 1% auto;
+  }
+  
+/*FORA DA GRELHA - POP-UP*/    
 #popup-zona{
-    width: 15%;
-    height: 8%;
+  width: 15%;
+  height: 8%;
+  
+  position: absolute;
+  top: 8%;
+  left: 20%;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 1%;
     
-    position: absolute;
-    top: 8%;
-    left: 20%;
-    border-radius: 15px;
-    border: 1px solid black;
-    padding: 1%;
-      
 }
-    
+  
 #popup-zona .zona:hover{
-    font-style: italic;
+  font-style: italic;
 }
-    
+  
 #popup-zona .zona {
-      padding: 1%;
-      margin: auto;
+    padding: 1%;
+    margin: auto;
 }
 
 .zonas{
-    display: inline-block;
+  display: inline-block;
+  padding: 5%;
+  font-size: 1.5vw;
+  position:relative;
+  z-index: 2;
 }
 
 /*BOTÃO ZONAS + CLICK*/
 
 .botao_zonas{
-    display: inline-block;
+  display: inline-block;
 
-    position: relative;
-    bottom: -0.25vmin;
-    left: -0.5vw;
-
+  position: relative;
+  bottom: -0.25vmin;
+  left: -0.5vw;
+  z-index: 2;
 }
 
- .hide{
-    display:none;
- }
-
- .flip{
-    transform: scaleY(-1);
- }
-
-
-
- /*MAPA*/
-
- .distrito{
-    position:relative;
-    width:33vw;
-    height: auto;
-    
-    animation-name: floating;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-   
- }
-
- @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }    
+.zona_container{
+  position:relative;
 }
 
- #guarda{
-    animation-duration: 3s;
-    right: -5vw;
-    bottom: -2vw;
+#ret_zona{
+position:absolute;
+bottom: 1.75vw;
+left: 3vw;
+}
 
- }
+#ret_artista{
+  position:absolute;
+  bottom: 0.3vw;
+  left: 3vw;
+}
 
- #viseu{
-    animation-duration: 5s;
-   right: -17vw;
-   bottom: 7vw;
- }
+.hide{
+  display:none;
+}
 
- #aveiro{
-    animation-duration: 4s;
-    right: -17vw;
-    bottom: -8vw;
-  }
+.flip{
+  transform: scaleY(-1);
+}
 
+.artistas_index{
+padding: 5%;
+text-decoration: none;
+color:black; 
+font-size: 1.5vw;
+position: relative;
+z-index:2
+}
 
- #coimbra{
-    animation-duration: 4.5s;
-    width: 50vw;
-    left: 10vw;
-  }
+/*MAPA*/
 
-
- #leiria{
-    animation-duration: 3.5s;
-    width: 55vw;
-    left:-10vw;
-
-  }
+.distrito{
+  position:relative;
+  width:33vw;
+  height: auto;
+  
+  animation-name: floating;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
  
+}
 
- #castelobranco{
-    animation-duration: 5.5s;
-    width: 57vw;
-    left: 40vw;
-    top: -60vw;
-  }
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+
+#guarda{
+  animation-duration: 3s;
+  right: -5vw;
+  bottom: -2vw;
+
+}
+
+#viseu{
+  animation-duration: 5s;
+ right: -17vw;
+ bottom: 7vw;
+}
+
+#aveiro{
+  animation-duration: 4s;
+  right: -17vw;
+  bottom: -8vw;
+}
+
+
+#coimbra{
+  animation-duration: 4.5s;
+  width: 50vw;
+  left: 10vw;
+}
+
+
+#leiria{
+  animation-duration: 3.5s;
+  width: 55vw;
+  left:-10vw;
+
+}
+
+
+#castelobranco{
+  animation-duration: 5.5s;
+  width: 57vw;
+  left: 40vw;
+  top: -60vw;
+}
 
 /* titulos */
 
-  .titulo{
-    position: absolute;
-    font-size: 2.5vw;
-  }
+.titulo{
+  position: absolute;
+  font-size: 2.5vw;
+}
 
-  .av_text{
-    left:23vw;
-    top: 40vw;
-  }
+.av_text{
+  left:23vw;
+  top: 40vw;
+}
 
-  .vs_text{
-    left:60vw;
-    top: 20vw;
-  }
+.vs_text{
+  left:60vw;
+  top: 20vw;
+}
 
-  .gd_text{
-    right:2vw;
-    top: 40vw;
-  }
-  
-  .co_text{
-    top: 80vw;
-   left:30vw;
-  }
+.gd_text{
+  right:2vw;
+  top: 40vw;
+}
 
-  .lr_text{
-    left:10vw;
-    top: 110vw;
-  }
+.co_text{
+  top: 80vw;
+ left:30vw;
+}
 
-  .cb_text{
-    right:10vw;
-  }
+.lr_text{
+  left:10vw;
+  top: 110vw;
+}
+
+.cb_text{
+  right:10vw;
+}
 
 .dot{
-    position: absolute;
-    width:1vw;
+  position: absolute;
+  width:1vw;
+}
+
+#dotaveiro{
+left:23vw;
+top: 40vw;
+}
+
+#dotcoimbra{
+top: 80vw;
+left: 30vw;
+}
+
+#ultdist{
+white-space:nowrap;
+height: 90vh;
+}
+
+#dotcastelo{
+right:25vw; 
 }
 
 .mobile{
-    display: none;
+  display: none;
 }
-
 
 /*----------- MOBILE ---------------*/
-
-
-
 @media (max-width: 480px) {
-    body, html {
-        margin: 0;  
-    }
+  body, html {
+      margin: 0;  
+  }
 .desktop{
-    display: none;
+  display: none;
 }
 .mobile{
-    display:inline-block;
-    overflow: auto;
-    white-space: nowrap;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
 }
 .container{
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #logo-mapa{
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 /*mapa e scroll*/
 
 #svg-scroll{
-    width: 115vw;
-    height: 100vh;
-    overflow: scroll;
+  width: 115vw;
+  height: 100vh;
+  overflow: scroll;
 
-    white-space: nowrap; /* Impede quebras de linha */
+  white-space: nowrap; /* Impede quebras de linha */
 }
 #mapa{
-    width: 300vw; /* Defina a largura conforme necessário */
-    height: 150%;
-    user-select: none;
+  width: 300vw; /* Defina a largura conforme necessário */
+  height: 150%;
+  user-select: none;
 }
 /*indicador de zona*/
 .zonas{
-    font-size: 4vw;
-    position: absolute;
-    left: 0;
-    top: 5vw;
-    z-index: 2;
-    background-color:#EE6C59;
-    color: white;
-    padding: 1vw;
-    border-radius: 2vw;
-    margin-left: 2vw;
+  font-size: 4vw;
+  position: absolute;
+  left: 0;
+  top: 5vw;
+  z-index: 2;
+  background-color:#EE6C59;
+  color: white;
+  padding: 1vw;
+  border-radius: 2vw;
+  margin-left: 2vw;
 }
 
 }

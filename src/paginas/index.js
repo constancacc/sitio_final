@@ -1,11 +1,19 @@
-import React from "react";
-import ReactDom from "react-dom";
+import "../css/index.css";
 
-function Index(){
-    return(
-    <>
+
+function Index() {
+
+  function click(){
+    let pop_up = document.querySelector("#popup-zona");
+    pop_up.classList.toggle("hide");
+
+    let bot_zonas = document.querySelector(".botao_zonas");
+    bot_zonas.classList.toggle("flip");
+  }  
+  return(
+    
     <div className="body">
-    <div className="container">
+    <div className="container_index">
        
       <div className="row" id="logo-mapa">
        
@@ -35,7 +43,7 @@ function Index(){
         </svg>
       
       </div>
-      <div className="row desktop" style="height: 7vh;"></div>
+      <div className="row desktop"></div>
 
       <div className="desktop">
       <div className="row">
@@ -43,13 +51,14 @@ function Index(){
         <div className="col-lg-1"></div>
         <div className="col-lg-2">
           
-          <p className="zonas" style="padding: 5%; font-size: 1.5vw;position:relative; z-index: 2;">Zona Centro</p>
+          <div className="zona_container"> 
+          <p className="zonas">Zona Centro</p>
           
-          <svg className="botao_zonas" style="z-index: 2;" onclick="click()" width="23" height="15" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="botao_zonas" onClick={click} width="23" height="15" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="Vector 5" d="M28 19.5L15.5 5L3 19.5" stroke="black" stroke-width="4"/>
           </svg>
-          <img style="position:absolute; top: 10.7vw; left: 11vw" width="7%" src="imagens/mapa/zona.svg"/>
-  
+          <img id="ret_zona" width="40%" src="imagens/mapa/zona.svg" alt="zona" />
+          </div>
           
           <div id="popup-zona" className="hide">
             <span className="zona"><i>centro</i></span>
@@ -66,54 +75,45 @@ function Index(){
         </div>
 
 
-         
-          <a href="#artistas" className = "artistas" style="padding: 5%; text-decoration: none; color:black;  font-size: 1.5vw; position: relative; z-index:2"> Artistas</a>
-          <img style="position:absolute; top: 14.7vw; left: 11vw" width="7%" src="imagens/mapa/artista.svg"/>
-      
+         <div className="zona_container">
+          <p className = "artistas_index"> Artistas</p>
+          <img id="ret_artista" width="40%" src="imagens/mapa/artista.svg"  alt="artista" />
         </div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-1"></div>
+        </div>
         
       </div>
  
       <div className="row">
         <img className="distrito" id="aveiro" src="imagens/mapa/Aveiro.png" alt="Aveiro"/>
-        <img className="dot av_text" style="left:23vw; top: 40vw;" src="imagens/mapa/dot.svg"/>
+        <img className="dot av_text" id="dotaveiro" src="imagens/mapa/dot.svg"  alt="dot_aveiro" />
         <p className="titulo av_text"> Aveiro </p>
 
-        <img className="distrito" id="viseu"src="imagens/mapa/Viseu.png"  alt="Viseu"/>
+        <img className="distrito" id="viseu" src="imagens/mapa/Viseu.png"  alt="Viseu"/>
         <p className="titulo vs_text"> Viseu </p>
-        <img className="dot vs_text" src="imagens/mapa/dot2.svg"/>
+        <img className="dot vs_text" src="imagens/mapa/dot2.svg"  alt="dot_viseu"/>
 
         <img className="distrito" id="guarda"src="imagens/mapa/Guarda.png" alt="Guarda"/>
         <p className="titulo gd_text"> Guarda</p>
-        <img className="dot gd_text" src="imagens/mapa/dot2.svg"/>
+        <img className="dot gd_text" src="imagens/mapa/dot2.svg"  alt="dot_guarda"/>
 
       </div>
       <div className="row">
 
         <img className="distrito" id="coimbra" src="imagens/mapa/Coimbra.png" alt="Coimbra"/>
-        <img className="dot co_text" style="top: 80vw; left: 30vw;"src="imagens/mapa/dot.svg"/>
+        <img className="dot co_text" id="dotcoimbra" src="imagens/mapa/dot.svg"  alt="dot_coimbra"/>
         <p className="titulo co_text"> Coimbra </p>
 
       </div>
 
-      <div className="row" style="height: 50vw;">
+      <div className="row" id="ultdist" >
 
         <img className="distrito" id="leiria" src="imagens/mapa/Leiria.png" alt="Leiria"/>
         <p className="titulo lr_text"> Leiria </p>
-        <img className="dot lr_text" src="imagens/mapa/dot 3.svg"/>
+        <img className="dot lr_text" src="imagens/mapa/dot 3.svg"  alt="dot_leiria"/>
 
         <img className="distrito" id="castelobranco" src="imagens/mapa/CasteloBranco.png" alt="CasteloBranco"/>
         <p className="titulo cb_text"> Castelo Branco </p>
-        <img className="dot cb_text" style="right:25vw; " src="imagens/mapa/dot 3.svg"/>
+        <img className="dot cb_text" id="dotcastelo" src="imagens/mapa/dot 3.svg"  alt="dot_castelo"/>
 
       </div>
     </div>
@@ -123,15 +123,15 @@ function Index(){
         <p className="zonas">zona centro</p>
         </div>
         <div className="row" id="svg-scroll" >
-          <img id="mapa" src="imagens/mapa/mapa_mobile2.svg"/>
+          <img id="mapa" src="imagens/mapa/mapa_mobile2.svg"  alt="mapa_mobile"/>
         </div>
       </div>
   </div>
 
   {/* <script src="js/main.js"></script>*/}
     </div>
-    </>
+  
     );
-};
+}
 
-ReactDom.render(<Index/>, document.getElementById('root'));
+export default Index;
