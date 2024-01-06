@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/Carousel3.css"; // Importe um arquivo de estilo para personalização opcional
+import "../css/carousel3.css"; 
 
 import exposicao from '../imagens/exposicao.png';
 import location from '../imagens/location.svg';
@@ -53,14 +53,15 @@ const Carousel = () => {
       {[...Array(4)].map((_, index) => (
         <div key={index} className="carousel-item">
           <div className="carousel-content3">
-            <div className="col-lg-9 tabLink">
-              <img src={exposicao} alt='exposicao' />
+            <div className="tabLink">
+              <img src={exposicao} alt='exposicao' className="exposicao"/>
               <div className="galeria">
                 {slidesToShow <= 1 ? (
                   <h3>Nome da Galeria</h3>
                 ) : (
                   <h4>Nome da Galeria</h4>
                 )}
+                </div>
                 <Divider />
                 <div className="dados">
                   <img src={location} alt="location" className="icons"/>
@@ -70,7 +71,7 @@ const Carousel = () => {
                 </div>
               </div>
             </div>
-          </div>
+    
         </div>
       ))}
     </Slider>

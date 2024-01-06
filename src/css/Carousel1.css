@@ -8,14 +8,13 @@
   background-color: #F89668;
 }
 
-.icons{
-  margin-right: 5px;
-  margin-left: 5px;
+.galeriaImage{
+  position: relative;
+  width: 100%;    
 }
 
-.linha {
-  width: 100%;
-  color: #000000;
+.icons{
+  margin-right: 5px;
 }
 
 .galeria {
@@ -23,10 +22,6 @@
 }
 
 .dados {
+  padding: 0 10%;
   display: inline-flex;
-}
-
-hr{
-  border-top: "5px";
-  color: '#303E4D';
 }

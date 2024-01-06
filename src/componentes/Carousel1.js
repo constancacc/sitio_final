@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/Carousel1.css"; 
+import "../css/carousel1.css"; 
 
 import galeria from "../imagens/galeria.png";
 import location from "../imagens/location.svg";
@@ -26,11 +26,11 @@ const Carousel = () => {
     <Slider {...settings}>
       {[...Array(3)].map((_, index) => (
       <div key={index} className="carousel-item">
-        <div className="carousel-content">
-          <div className="col-lg-9">
-            <img src={galeria} alt='galeria'/>
+        <div className="carousel-content">     
+            <img src={galeria} alt='galeria' className="galeriaImage"/>
             <div className="galeria">
-              <h4>Nome da Galeria</h4>
+            <h3>Nome da Galeria</h3>
+            </div>
               <Divider />
               <div className="dados">
                 <img src={location} alt="location" className="icons" />
@@ -40,8 +40,7 @@ const Carousel = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+
 
       ))}
 
