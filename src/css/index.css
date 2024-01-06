@@ -149,6 +149,10 @@ z-index:2
 }
 
 /* titulos */
+.link{
+  color: black;
+  text-decoration: none;
+}
 
 .titulo{
   position: absolute;

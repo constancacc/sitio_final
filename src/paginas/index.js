@@ -1,5 +1,5 @@
 import "../css/index.css";
-
+import { Link } from "react-router-dom";
 
 function Index() {
 
@@ -10,6 +10,11 @@ function Index() {
     let bot_zonas = document.querySelector(".botao_zonas");
     bot_zonas.classList.toggle("flip");
   }  
+
+  function indisponivel(){
+    alert("indisponivel");
+  }
+
   return(
     
     <div className="body">
@@ -63,12 +68,12 @@ function Index() {
           <div id="popup-zona" className="hide">
             <span className="zona"><i>centro</i></span>
             <span>|</span>
-            <span className="zona">norte </span>
+            <span className="zona" onClick={indisponivel} >norte </span>
             <span>|</span>
-            <p className="zona">área metropolitana de Lisboa</p>
-            <span className="zona">alentejo </span>
+            <p className="zona" onClick={indisponivel}>área metropolitana de Lisboa</p>
+            <span className="zona" onClick={indisponivel}>alentejo </span>
             <span>|</span>
-            <span className="zona">algarve</span>
+            <span className="zona" onClick={indisponivel}>algarve</span>
 
           
 
@@ -76,7 +81,11 @@ function Index() {
 
 
          <div className="zona_container">
+
+          <Link className="link" to="/artistas">
           <p className = "artistas_index"> Artistas</p>
+          </Link>
+
           <img id="ret_artista" width="40%" src="imagens/mapa/artista.svg"  alt="artista" />
         </div>
         </div>
@@ -85,35 +94,35 @@ function Index() {
  
       <div className="row">
         <img className="distrito" id="aveiro" src="imagens/mapa/Aveiro.png" alt="Aveiro"/>
-        <img className="dot av_text" id="dotaveiro" src="imagens/mapa/dot.svg"  alt="dot_aveiro" />
-        <p className="titulo av_text"> Aveiro </p>
+        <img className="dot av_text"onClick={indisponivel} id="dotaveiro" src="imagens/mapa/dot.svg"  alt="dot_aveiro" />
+        <p className="titulo av_text"onClick={indisponivel}> Aveiro </p>
 
         <img className="distrito" id="viseu" src="imagens/mapa/Viseu.png"  alt="Viseu"/>
-        <p className="titulo vs_text"> Viseu </p>
-        <img className="dot vs_text" src="imagens/mapa/dot2.svg"  alt="dot_viseu"/>
+        <p className="titulo vs_text" onClick={indisponivel}> Viseu </p>
+        <img className="dot vs_text" onClick={indisponivel} src="imagens/mapa/dot2.svg"  alt="dot_viseu"/>
 
         <img className="distrito" id="guarda"src="imagens/mapa/Guarda.png" alt="Guarda"/>
-        <p className="titulo gd_text"> Guarda</p>
-        <img className="dot gd_text" src="imagens/mapa/dot2.svg"  alt="dot_guarda"/>
+        <p className="titulo gd_text"onClick={indisponivel}> Guarda</p>
+        <img className="dot gd_text" onClick={indisponivel}src="imagens/mapa/dot2.svg"  alt="dot_guarda"/>
 
       </div>
       <div className="row">
-
-        <img className="distrito" id="coimbra" src="imagens/mapa/Coimbra.png" alt="Coimbra"/>
+      <img className="distrito" id="coimbra" src="imagens/mapa/Coimbra.png" alt="Coimbra"/>
+        <Link class="link" to ="/">
         <img className="dot co_text" id="dotcoimbra" src="imagens/mapa/dot.svg"  alt="dot_coimbra"/>
         <p className="titulo co_text"> Coimbra </p>
-
+        </Link>
       </div>
 
       <div className="row" id="ultdist" >
 
         <img className="distrito" id="leiria" src="imagens/mapa/Leiria.png" alt="Leiria"/>
-        <p className="titulo lr_text"> Leiria </p>
-        <img className="dot lr_text" src="imagens/mapa/dot 3.svg"  alt="dot_leiria"/>
+        <p className="titulo lr_text"onClick={indisponivel}> Leiria </p>
+        <img className="dot lr_text" onClick={indisponivel}src="imagens/mapa/dot 3.svg"  alt="dot_leiria"/>
 
         <img className="distrito" id="castelobranco" src="imagens/mapa/CasteloBranco.png" alt="CasteloBranco"/>
-        <p className="titulo cb_text"> Castelo Branco </p>
-        <img className="dot cb_text" id="dotcastelo" src="imagens/mapa/dot 3.svg"  alt="dot_castelo"/>
+        <p className="titulo cb_text"onClick={indisponivel}> Castelo Branco </p>
+        <img className="dot cb_text" onClick={indisponivel}id="dotcastelo" src="imagens/mapa/dot 3.svg"  alt="dot_castelo"/>
 
       </div>
     </div>
@@ -127,9 +136,7 @@ function Index() {
         </div>
       </div>
   </div>
-
-  {/* <script src="js/main.js"></script>*/}
-    </div>
+  </div>
   
     );
 }
