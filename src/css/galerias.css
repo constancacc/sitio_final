@@ -20,8 +20,17 @@
     border-radius: 10px;
     z-index: 1;
   }
-  
+
+  .galeria-list-element.clicked{
+    background-color: #F89668;
+  }
   /* .tab > .nav-link:hover {
     background-color: #cee6c0;
   } */
-  
+
+ 
+  .galeria-list-content-expanded{
+    padding: 0 2%;
+    display: inline-flex;
+  }
+
