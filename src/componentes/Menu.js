@@ -1,5 +1,5 @@
 import logo from "../imagens/sitio.svg";
-import search from "../imagens/search.svg";
+import search from "../imagens/search2.svg";
 
 import { Link } from "react-router-dom";
 
