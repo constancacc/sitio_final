@@ -1,10 +1,12 @@
+import { useEffect, useState } from "react";
+import { getPrincipalGalleries } from "../lib/cosmic.js";
+
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/carousel1.css"; 
+import "../css/carousel1.css";
 
-import galeria from "../imagens/galeria.png";
 import location from "../imagens/location.svg";
 import clock from "../imagens/Clock.svg";
 import Divider from "./Divider.js";
@@ -16,32 +18,55 @@ const Carousel = () => {
     slidesToShow: 1,
     speed: 1500,
     focusOnSelect: true,
-    centerPadding: "2%", // Ajuste conforme necessário
-    dots: true, // Ativação dos pontos de navegação
-    autoplay: true, // Ativação da passagem automática
-    autoplaySpeed: 5000, // Velocidade de transição automática em milissegundos
+    centerPadding: "2%",
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const fetchedPosts = await getPrincipalGalleries();
+        console.log("Fetched Posts:", fetchedPosts);
+
+        const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
+
+        setPosts(destaquesPosts);
+        console.log("Destaques Posts:", destaquesPosts);
+
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <Slider {...settings}>
-      {[...Array(3)].map((_, index) => (
-      <div key={index} className="carousel-item">
-        <div className="carousel-content">     
-            <img src={galeria} alt='galeria' className="galeriaImage"/>
+      {posts.map((post) => (
+
+        <div key={post.id} className="carousel-item">
+
+          <div className="carousel-content">
+
+            <img src={post.metadata.imagem_galeria.url} alt='galeria' className="galeriaImage" />
             <div className="galeria">
-            <h3>Nome da Galeria</h3>
+              <h3>{post.title}</h3>
             </div>
-              <Divider />
-              <div className="dados">
-                <img src={location} alt="location" className="icons" />
-                <p>Rua de Miguel Bombarda</p>
-                <img src={clock} alt="clock"  className="icons" />
-                <p>Rua de Miguel Bombarda</p>
-              </div>
+            <Divider />
+            <div className="dados">
+              <img src={location} alt="location" className="icons" />
+              <p>{post.metadata.localizacao_galeria}</p>
+              <img src={clock} alt="clock" className="icons" />
+              <p>{post.metadata.horario_galeria}</p>
             </div>
           </div>
 
 
+        </div>
       ))}
 
     </Slider>

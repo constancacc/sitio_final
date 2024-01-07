@@ -1,40 +1,16 @@
-import React, { useState, useEffect } from "react";import Slider from "react-slick";
+import React, { useState, useEffect } from "react";
+import { getPrincipalExposicoes } from "../lib/cosmic.js";
+
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/carousel3.css"; 
+import "../css/carousel3.css";
 
-import exposicao from '../imagens/exposicao.png';
 import location from '../imagens/location.svg';
 import clock from '../imagens/Clock.svg';
 import Divider from './Divider.js'
 
 const Carousel = () => {
-
-  const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
-
-  function calculateSlidesToShow() {
-    const windowWidth = window.innerWidth;
-
-    if (windowWidth <= 600) {
-      return 1; // Small screens
-    } else if (windowWidth <= 1400) {
-      return 2; 
-    } else {
-      return 3; // Larger screens
-    }
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      setSlidesToShow(calculateSlidesToShow());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
 
   const settings = {
     centerMode: true,
@@ -43,35 +19,81 @@ const Carousel = () => {
     slidesToShow: slidesToShow,
     speed: 1500,
     focusOnSelect: true,
-    dots: true, // Ativação dos pontos de navegação
-    autoplay: true, // Ativação da passagem automática
-    autoplaySpeed: 5000, // Velocidade de transição automática em milissegundos
+    dots: true, 
+    autoplay: true, 
+    autoplaySpeed: 5000, 
   };
+
+  const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
+  const [posts, setPosts] = useState([]);
+
+  function calculateSlidesToShow() {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 600) {
+      return 1; // Small screens
+    } else if (windowWidth <= 1400) {
+      return 2;
+    } else {
+      return 3; // Larger screens
+    }
+  }
+
+  useEffect(() => {
+
+    function handleResize() {
+      setSlidesToShow(calculateSlidesToShow());
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+    async function fetchData() {
+      try {
+        const fetchedPosts = await getPrincipalExposicoes();
+        console.log("Fetched Posts:", fetchedPosts);
+
+        const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
+
+        setPosts(destaquesPosts);
+        console.log("Destaques Posts:", destaquesPosts);
+
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    }
+
+    fetchData();
+
+  }, []);
 
   return (
     <Slider {...settings}>
-      {[...Array(4)].map((_, index) => (
-        <div key={index} className="carousel-item">
+      {posts.map((post) => (
+        <div key={post.id} className="carousel-item">
           <div className="carousel-content3">
             <div className="tabLink">
-              <img src={exposicao} alt='exposicao' className="exposicao"/>
+              <img src={post.metadata.imagem1.url} alt='exposicao' className="exposicao" />
               <div className="galeria">
                 {slidesToShow <= 1 ? (
-                  <h3>Nome da Galeria</h3>
+                  <h3>{post.title}</h3>
                 ) : (
-                  <h4>Nome da Galeria</h4>
+                  <h4>{post.title}</h4>
                 )}
-                </div>
-                <Divider />
-                <div className="dados">
-                  <img src={location} alt="location" className="icons"/>
-                  <p>Rua de Miguel Bombarda</p>
-                  <img src={clock} alt="clock" className="icons"/>
-                  <p>Rua de Miguel Bombarda</p>
-                </div>
+              </div>
+              <Divider />
+              <div className="dados">
+                <img src={location} alt="location" className="icons" />
+                <p>{post.metadata.localizacao}</p>
+                <img src={clock} alt="clock" className="icons" />
+                <p>{post.metadata.horario}</p>
               </div>
             </div>
-    
+          </div>
+
         </div>
       ))}
     </Slider>

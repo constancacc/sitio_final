@@ -24,5 +24,32 @@ export async function getAllGalleries() {
   return data.objects;
 }
 
+export async function getPrincipalGalleries() {
+  const data = await cosmic.objects
+    .find({ type: "galerias" })
+    .props("id,slug,title,metadata");
+  // .depth(1);
+  return data.objects;
+}
+
+export async function getPrincipalArtists() {
+  const data = await cosmic.objects
+    .find({ type: "artistas" })
+    .props("id,slug,title,metadata");
+  // .depth(1);
+  return data.objects;
+}
+
+export async function getPrincipalExposicoes() {
+  const data = await cosmic.objects
+    .find({ type: "exposicoes" })
+    .props("id,slug,title,metadata");
+  // .depth(1);
+  return data.objects;
+}
+
+
+
+
 
 
