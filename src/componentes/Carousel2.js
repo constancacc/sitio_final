@@ -1,4 +1,4 @@
-import '../css/Carousel2.css';
+import '../css/carousel2.css';
 import image1 from '../imagens/image1.png';
 import image2 from '../imagens/image2.png';
 import image3 from '../imagens/image3.png';
@@ -74,15 +74,15 @@ const imagesArray = [
     },
 ];
 
-export default function App() {
 
+  export default function App() {
     return (
-        <div className='image-gallery-container'>
-            <ImageGallery
-                imagesInfoArray={imagesArray}
-                columnWidth={200}
-                gapSize={15}
-            />
-        </div>
+      <div className='image-gallery-container'>
+        <ImageGallery
+          imagesInfoArray={imagesArray}
+          columnWidth={200}
+          gapSize={15}
+        />
+      </div>
     );
-}
+  }

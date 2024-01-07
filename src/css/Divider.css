@@ -2,11 +2,13 @@
   .custom-divider {
     display: flex;
     align-items: center;
-    width: 100%;
   }
   
   .line {
     flex-grow: 1;
-    border: 0.5px solid #25252533; 
+    border: 0.5px solid #25252517; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
