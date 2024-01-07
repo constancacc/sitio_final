@@ -2,6 +2,8 @@ import logo from "../imagens/sitio.svg";
 import mail from "../imagens/mail.svg";
 import phone from "../imagens/phone.svg";
 
+import '../css/footer.css';
+
 function Footer() {
   return (
     <div id="barfooter">
