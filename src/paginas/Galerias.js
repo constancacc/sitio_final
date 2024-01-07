@@ -77,7 +77,7 @@ function Galerias() {
                   <p>{post.metadata.localizacao_galeria}</p>
                   <img src={clock} alt="clock" className="icons" />
                   <p>{post.metadata.horario_galeria}</p>
-                  <Link to="/galeria" className="button-link">
+                  <Link to={"/galeria/" + post.slug} className="button-link">
                     <img src={arrow} alt="arrow" className="button" />
                   </Link>
                 </div>

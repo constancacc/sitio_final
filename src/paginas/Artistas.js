@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllArtists } from "../lib/cosmic.js";
+import { Link } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
@@ -39,28 +40,30 @@ function Artistas() {
     <div id="PagArtistas" onMouseMove={imagePosition}>
       <Menu page="artistas" />
       {posts.map((post) => (
-        <div
-          key={post.id}
-          className="row artista-list-element"
-          onMouseEnter={() => setHoveredIndex(post.id)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <div className="col-xs-12">
-            {hoveredIndex === post.id && (
-              <img
-                className="artista-imagem"
-                src={post.metadata.imagem_artista.url}
-                alt="imagem-artista"
-                style={{
-                  top: mousePosition.y,
-                  left: mousePosition.x,
-                }}
-              />
-            )}
-            <h1>{post.title}</h1>
-            <hr />
+        <Link to={"/artista/" + post.slug} key={post.slug}>
+          <div
+            key={post.id}
+            className="row artista-list-element"
+            onMouseEnter={() => setHoveredIndex(post.id)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div className="col-xs-12">
+              {hoveredIndex === post.id && (
+                <img
+                  className="artista-imagem"
+                  src={post.metadata.imagem_artista.url}
+                  alt="imagem-artista"
+                  style={{
+                    top: mousePosition.y,
+                    left: mousePosition.x,
+                  }}
+                />
+              )}
+              <h1>{post.title}</h1>
+              <hr />
+            </div>
           </div>
-        </div>
+        </Link>
       ))}
       <Footer />
     </div>

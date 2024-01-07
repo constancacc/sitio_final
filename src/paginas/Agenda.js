@@ -37,7 +37,7 @@ function Agenda() {
   const settings = {
     centerMode: true,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     speed: 1500,
     focusOnSelect: true,
     centerPadding: "2%",
@@ -89,7 +89,7 @@ function Agenda() {
               <div className="row agenda-carousel">
                 <Slider {...settings}>
                   {posts.map((post) => (
-                    <Link to={post.slug} key={post.slug}>
+                    <Link to={"/exposicao/" + post.slug} key={post.slug}>
                       <div>
                         <div>
                           <img
