@@ -218,9 +218,10 @@ right:25vw;
 
 /*----------- MOBILE ---------------*/
 @media (max-width: 480px) {
-  body, html {
+.body, html {
       margin: 0;  
-  }
+}
+
 .desktop{
   display: none;
 }
@@ -229,6 +230,7 @@ right:25vw;
   overflow: auto;
   white-space: nowrap;
 }
+
 .container_index{
   overflow: hidden;
 }
@@ -240,17 +242,15 @@ right:25vw;
 /*mapa e scroll*/
 
 #svg-scroll{
-  width: 115vw;
-  height: 100vh;
-  overflow: scroll;
-
-  white-space: nowrap; /* Impede quebras de linha */
+  width: 300vw;
+  height: 95vh;
 }
 #mapa{
-  width: 300vw; /* Defina a largura conforme necessário */
-  height: 150%;
-  user-select: none;
+  width:100%;
+  position: relative;
+  right: 80vw;
 }
+
 /*indicador de zona*/
 .zonas{
   font-size: 4vw;
