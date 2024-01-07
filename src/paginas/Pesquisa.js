@@ -38,29 +38,31 @@ function Pesquisa() {
   return (
     <div id="PagDestaques" >
       <Menu />
-      
+
       <div className="row" style={{ height: "5vw" }}>
         <input
           type="text" name="search" id="data-search"
           size="40" maxLength="256" value={value} onChange={onChange}
           placeholder="Pesquisa por nome da obra ou tipo de arte" />
       </div>
-
-      {value && (
-        filteredPosts.map((post) => (
-          <div
-            key={post.id}
-            className="row list-element"
-          >
-            <div className="col-xs-12">
-              <h1>{post.title}</h1>
-              <hr />
+      
+        {value && (
+          filteredPosts.map((post) => (
+            <div
+              key={post.id}
+              className="row list-element"
+            >
+              <div className="col-xs-12">
+                <h1>{post.title}</h1>
+                <hr />
+              </div>
             </div>
-          </div>
-        ))
-      )}
-
+          ))
+        )}
+     
+      <div id="pesquisa_container">
       <Footer />
+      </div>
     </div>
   );
 }
