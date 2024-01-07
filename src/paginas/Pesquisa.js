@@ -3,6 +3,7 @@ import { getAllArtists, getAllGalleries } from "../lib/cosmic.js";
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 import "../css/pesquisa.css";
+import search from "../imagens/search2.svg";
 
 function Pesquisa() {
   const [posts, setPosts] = useState([]);
@@ -39,15 +40,19 @@ function Pesquisa() {
     <div id="PagDestaques" >
       <Menu />
 
-      <div className="row" style={{ height: "5vw" }}>
-        <input
+      <div className="row">
+        <div className="searchContainer">
+        <img id="icone_pesquisa" src={search} alt="search"></img>
+        <input className="barra_pesquisa"
           type="text" name="search" id="data-search"
           size="40" maxLength="256" value={value} onChange={onChange}
-          placeholder="Pesquisa por nome da obra ou tipo de arte" />
+          placeholder="pesquisa por nome de artista ou de galeria" />
+          </div>
       </div>
-      <div id="pesquisa_container">
         {value && (
-          filteredPosts.map((post) => (
+          filteredPosts
+          .slice(0, 2)
+          .map((post) => (
             <div
               key={post.id}
               className="row list-element"
@@ -59,7 +64,6 @@ function Pesquisa() {
             </div>
           ))
         )}
-     </div>
       
       <Footer />
       

@@ -11,6 +11,7 @@ function Menu() {
           <Link to="/">
             <img src={logo} alt="sitio"></img>
           </Link>
+          
           <button id="localButton">Coimbra</button>
           <Link to="/pesquisa">
           <img src={search} alt="search"></img>

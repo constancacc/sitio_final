@@ -20,7 +20,38 @@
     display:block;
   }
 
-  #pesquisa_container{
-    position: relative;
-    height: fit-content;
-  }
+ .barra_pesquisa{
+  background-color: #8AB2DD;
+  padding: 1vw;
+  border-radius: 1vw;
+  border: none;
+  font-family: 'Bellota Text';
+  margin-top: 2vw;
+  position: relative;
+  bottom: 3.6vh;
+ }
+
+ ::placeholder{
+  color: white;
+ }
+
+ .barra_pesquisa:focus{
+  border: none;
+ }
+
+ #icone_pesquisa{
+  margin: auto;
+  position: relative;
+  bottom: 2.3vh;
+  left: -0.5vw;
+  
+
+ }
+
+ .searchContainer{
+  
+  margin: 2vw auto;
+  height: 6vh;
+  
+  border-radius: 1vw;
+ }
