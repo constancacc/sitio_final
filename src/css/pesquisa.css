@@ -1,0 +1,13 @@
+.list-element h1 {
+    padding: 0 2%;
+  }
+  
+  .list-element:hover {
+    cursor: pointer;
+    background-color: #8AB2DD;
+  }
+  
+  hr {
+    margin: 0;
+    padding: 0;
+  }
