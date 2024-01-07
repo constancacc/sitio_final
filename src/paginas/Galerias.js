@@ -16,7 +16,7 @@ function Galerias() {
   const [posts, setPosts] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
-  const [clicked, setClicked] = useState(false);
+
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
@@ -43,10 +43,6 @@ function Galerias() {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
 
-  const toggleColor = () => {
-    setClicked(!clicked);
-  };
-
   return (
     <div id="PagDestaques" onMouseMove={imagePosition}>
       <Menu />
@@ -71,7 +67,7 @@ function Galerias() {
               />
             )}
             <h1>{post.title}</h1>
-            <hr />
+
             {selectedIndex === post.id && (
               <div className="galeria-list-element-expanded">
                 <div className="galeria-list-content-expanded">
@@ -83,9 +79,11 @@ function Galerias() {
                     <img src={arrow} alt="arrow" className="button" />
                   </Link>
                 </div>
-
               </div>
             )}
+
+            <hr />
+            
 
           </div>
 
