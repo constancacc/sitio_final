@@ -19,3 +19,7 @@
   .show{
     display:block;
   }
+
+  #pesquisa_container{
+    height:30vh;
+  }
