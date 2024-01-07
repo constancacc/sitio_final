@@ -7,11 +7,11 @@ import search from "../imagens/search2.svg";
 
 function Pesquisa() {
   const [posts, setPosts] = useState([]);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const onChange = (event) => {
     setValue(event.target.value);
-  }
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -29,7 +29,7 @@ function Pesquisa() {
     fetchData();
   }, []);
 
-  const filteredPosts = posts.filter(post => {
+  const filteredPosts = posts.filter((post) => {
     const searchTerm = value.toLowerCase();
     const title = post.title.toLowerCase();
 
@@ -37,36 +37,36 @@ function Pesquisa() {
   });
 
   return (
-    <div id="PagDestaques" >
-      <Menu />
+    <div id="PagDestaques">
+      <Menu page="index" />
 
       <div className="row">
         <div className="searchContainer">
-        <img id="icone_pesquisa" src={search} alt="search"></img>
-        <input className="barra_pesquisa"
-          type="text" name="search" id="data-search"
-          size="40" maxLength="256" value={value} onChange={onChange}
-          placeholder="pesquisa por nome de artista ou de galeria" />
-          </div>
+          <img id="icone_pesquisa" src={search} alt="search"></img>
+          <input
+            className="barra_pesquisa"
+            type="text"
+            name="search"
+            id="data-search"
+            size="40"
+            maxLength="256"
+            value={value}
+            onChange={onChange}
+            placeholder="pesquisa por nome de artista ou de galeria"
+          />
+        </div>
       </div>
-        {value && (
-          filteredPosts
-          .slice(0, 2)
-          .map((post) => (
-            <div
-              key={post.id}
-              className="row list-element"
-            >
-              <div className="col-xs-12">
-                <h1>{post.title}</h1>
-                <hr />
-              </div>
+      {value &&
+        filteredPosts.slice(0, 2).map((post) => (
+          <div key={post.id} className="row list-element">
+            <div className="col-xs-12">
+              <h1>{post.title}</h1>
+              <hr />
             </div>
-          ))
-        )}
-      
+          </div>
+        ))}
+
       <Footer />
-      
     </div>
   );
 }

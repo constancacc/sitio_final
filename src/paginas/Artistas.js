@@ -36,8 +36,8 @@ function Artistas() {
   };
 
   return (
-    <div id="PagDestaques" onMouseMove={imagePosition}>
-      <Menu />
+    <div id="PagArtistas" onMouseMove={imagePosition}>
+      <Menu page="artistas" />
       {posts.map((post) => (
         <div
           key={post.id}

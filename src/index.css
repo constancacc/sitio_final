@@ -48,15 +48,24 @@ h6 {
   gap: 2em;
 }
 
-.tab > .nav-link {
+.tab > *[class*="nav-link"] {
   margin-left: auto;
   padding: 0 4%;
   text-decoration: none;
   color: #000000;
 }
 
-.tab > .nav-link:hover {
+.tab > .nav-link-index:hover,
+.tab > .nav-link-galerias:hover {
   background-color: #f89668;
+}
+
+.tab > .nav-link-artistas:hover {
+  background-color: #cee6c0;
+}
+
+.tab > .nav-link-agenda:hover {
+  background-color: #8ab2dd;
 }
 
 #navLinks {
@@ -79,7 +88,7 @@ h6 {
 /*Footer*/
 #footer {
   position: sticky;
-  
+
   bottom: 0;
   margin-top: 10vh;
   display: flex;
