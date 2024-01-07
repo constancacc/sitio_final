@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Galerias from "./paginas/Galerias.js";
 import Artistas from "./paginas/Artistas.js";
 import Destaques from "./paginas/Destaques.js";
-import Pesquisa from "./paginas/Pesquisa.js";
+import Pesquisa from "./paginas/Exemplo.js";
 import Index from "./paginas/index.js";
 
 function AppRoutes() {
