@@ -32,6 +32,13 @@ function Pesquisa() {
   return (
     <div id="PagDestaques" >
       <Menu />
+      <div className="row" style={{height: "5vw"}}></div>
+      
+      <input 
+        type="text" name="search" id="data-search"
+        size="40" maxlength="256" value=""
+        placeholder="Pesquisa por nome da obra ou tipo de arte"/>
+        
       {posts.map((post) => (
         <div
           key={post.id}
