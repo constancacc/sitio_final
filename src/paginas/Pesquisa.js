@@ -45,7 +45,7 @@ function Pesquisa() {
           size="40" maxLength="256" value={value} onChange={onChange}
           placeholder="Pesquisa por nome da obra ou tipo de arte" />
       </div>
-      
+      <div id="pesquisa_container">
         {value && (
           filteredPosts.map((post) => (
             <div
@@ -59,10 +59,10 @@ function Pesquisa() {
             </div>
           ))
         )}
-     
-      <div id="pesquisa_container">
+     </div>
+      
       <Footer />
-      </div>
+      
     </div>
   );
 }

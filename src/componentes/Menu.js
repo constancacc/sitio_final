@@ -12,7 +12,9 @@ function Menu() {
             <img src={logo} alt="sitio"></img>
           </Link>
           <button id="localButton">Coimbra</button>
+          <Link to="/pesquisa">
           <img src={search} alt="search"></img>
+          </Link>
         </div>
         <div className="col-lg-3 tab" id="navLinks">
           <Link to="/galerias" className="nav-link">

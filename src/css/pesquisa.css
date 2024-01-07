@@ -21,5 +21,6 @@
   }
 
   #pesquisa_container{
-    height:30vh;
+    position: relative;
+    height: fit-content;
   }
