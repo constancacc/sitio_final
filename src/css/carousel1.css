@@ -1,19 +1,18 @@
-
 .slick-slider {
   width: 100%;
 }
 
 .carousel-content {
   width: 99%;
-  background-color: #F89668;
+  background-color: #f89668;
 }
 
-.galeriaImage{
+.galeriaImage {
   position: relative;
-  width: 10%;    
+  width: 10%;
 }
 
-.icons{
+.icons {
   margin-right: 5px;
 }
 

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
-import location from '../imagens/location.svg';
-import clock from '../imagens/Clock.svg';
-import arrow from '../imagens/arrow.svg';
+import location from "../imagens/location.svg";
+import clock from "../imagens/Clock.svg";
+import arrow from "../imagens/arrow.svg";
 
 import "../css/galerias.css";
 
@@ -45,11 +45,13 @@ function Galerias() {
 
   return (
     <div id="PagDestaques" onMouseMove={imagePosition}>
-      <Menu />
+      <Menu page="galerias" />
       {posts.map((post) => (
         <div
           key={post.id}
-          className={`row galeria-list-element ${selectedIndex === post.id ? 'clicked' : ''}`}
+          className={`row galeria-list-element ${
+            selectedIndex === post.id ? "clicked" : ""
+          }`}
           onMouseEnter={() => setHoveredIndex(post.id)}
           onMouseLeave={() => setHoveredIndex(null)}
           onClick={() => setSelectedIndex(post.id)}
@@ -75,7 +77,7 @@ function Galerias() {
                   <p>{post.metadata.localizacao_galeria}</p>
                   <img src={clock} alt="clock" className="icons" />
                   <p>{post.metadata.horario_galeria}</p>
-                  <Link to="/galeria" className="button-link">
+                  <Link to={"/galeria/" + post.slug} className="button-link">
                     <img src={arrow} alt="arrow" className="button" />
                   </Link>
                 </div>
@@ -83,10 +85,7 @@ function Galerias() {
             )}
 
             <hr />
-            
-
           </div>
-
         </div>
       ))}
       <Footer />

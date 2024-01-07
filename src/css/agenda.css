@@ -1,0 +1,35 @@
+.agenda-list-element {
+  cursor: pointer;
+}
+
+.agenda-list-element h1 {
+  padding: 0 2%;
+}
+
+.agenda-list-element:hover {
+  background-color: #8ab2dd;
+}
+
+.agenda-carousel {
+  padding: 3rem 0;
+}
+
+.agenda-imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.agenda-nome-exposicao {
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.agenda-nome-exposicao > h6 {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.active-month {
+  background-color: #8ab2dd;
+}

@@ -1,9 +1,13 @@
+.galeria-list-element {
+  cursor: pointer;
+}
+
 .galeria-list-element h1 {
   padding: 0 2%;
 }
 
 .galeria-list-element:hover {
-  background-color: #F89668;
+  background-color: #f89668;
 }
 
 hr {
@@ -22,13 +26,8 @@ hr {
 }
 
 .galeria-list-element.clicked {
-  background-color: #F89668;
+  background-color: #f89668;
 }
-
-/* .tab > .nav-link:hover {
-    background-color: #cee6c0;
-  } */
-
 
 .galeria-list-content-expanded {
   padding: 0 2%;

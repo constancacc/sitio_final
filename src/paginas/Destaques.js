@@ -10,7 +10,7 @@ import Carousel3 from "../componentes/Carousel3.js";
 function Destaques() {
   return (
     <div id="PagDestaques">
-      <Menu />
+      <Menu page="index" />
 
       <div className="row">
         <div className="col-lg-1"></div>
@@ -136,8 +136,8 @@ function Destaques() {
                     <p>data da exposição</p>
                 </div>
             </div> */}
-           
-             <Footer />
+
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ body {
   font-family: "Bellota Text", sans-serif;
   color: #000000;
   overflow-x: hidden;
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -33,12 +34,16 @@ h6 {
   font-size: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /*Menu*/
 #menu {
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
-  /* margin-bottom: 5vh; */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -48,15 +53,22 @@ h6 {
   gap: 2em;
 }
 
-.tab > .nav-link {
+.tab > *[class*="nav-link"] {
   margin-left: auto;
   padding: 0 4%;
-  text-decoration: none;
-  color: #000000;
 }
 
-.tab > .nav-link:hover {
+.tab > .nav-link-index:hover,
+.tab > .nav-link-galerias:hover {
   background-color: #f89668;
+}
+
+.tab > .nav-link-artistas:hover {
+  background-color: #cee6c0;
+}
+
+.tab > .nav-link-agenda:hover {
+  background-color: #8ab2dd;
 }
 
 #navLinks {
@@ -79,7 +91,7 @@ h6 {
 /*Footer*/
 #footer {
   position: sticky;
-  
+
   bottom: 0;
   margin-top: 10vh;
   display: flex;
