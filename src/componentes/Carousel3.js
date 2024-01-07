@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getPrincipalExposicoes } from "../lib/cosmic.js";
+import { getAllExhibitions } from "../lib/cosmic.js";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -11,6 +11,8 @@ import clock from '../imagens/Clock.svg';
 import Divider from './Divider.js'
 
 const Carousel = () => {
+  const [posts, setPosts] = useState([]);
+  const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
 
   const settings = {
     centerMode: true,
@@ -24,9 +26,8 @@ const Carousel = () => {
     autoplaySpeed: 5000, 
   };
 
-  const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
-  const [posts, setPosts] = useState([]);
-
+  
+ 
   function calculateSlidesToShow() {
     const windowWidth = window.innerWidth;
 
@@ -38,37 +39,36 @@ const Carousel = () => {
       return 3; // Larger screens
     }
   }
-
+ 
   useEffect(() => {
-
     function handleResize() {
       setSlidesToShow(calculateSlidesToShow());
     }
-
+  
     window.addEventListener("resize", handleResize);
-
+  
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-
+  
     async function fetchData() {
       try {
-        const fetchedPosts = await getPrincipalExposicoes();
+        const fetchedPosts = await getAllExhibitions();
         console.log("Fetched Posts:", fetchedPosts);
-
+  
         const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
-
-        setPosts(destaquesPosts);
         console.log("Destaques Posts:", destaquesPosts);
-
+  
+        setPosts(destaquesPosts);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     }
-
+  
     fetchData();
-
   }, []);
+  
+  
 
   return (
     <Slider {...settings}>

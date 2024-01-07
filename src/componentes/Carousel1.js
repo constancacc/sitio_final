@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPrincipalGalleries } from "../lib/cosmic.js";
+import { getAllGalleries } from "../lib/cosmic.js";
 
 import React from "react";
 import Slider from "react-slick";
@@ -29,7 +29,7 @@ const Carousel = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const fetchedPosts = await getPrincipalGalleries();
+        const fetchedPosts = await getAllGalleries();
         console.log("Fetched Posts:", fetchedPosts);
 
         const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);

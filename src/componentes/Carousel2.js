@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPrincipalArtists } from "../lib/cosmic.js";
+import { getAllArtists } from "../lib/cosmic.js";
 
 import '../css/carousel2.css';
 import { ImageGallery } from "react-image-grid-gallery";
@@ -12,7 +12,7 @@ export default function App() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const fetchedPosts = await getPrincipalArtists();
+                const fetchedPosts = await getAllArtists();
                 console.log("Fetched Posts:", fetchedPosts);
 
                 const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
