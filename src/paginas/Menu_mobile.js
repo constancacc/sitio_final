@@ -2,15 +2,15 @@
 import Menu from "../componentes/Menu.js";
 import { Link } from "react-router-dom";
 
-import gradiente from"../imagens/gradiente.svg"
+
 
 import '../css/menu_mobile.css';
 
-function Menu_Mobile() {
+function MenuMobile() {
   return (
     <div id="menucontainer">
       <Menu id="sobrepor"/>
-      
+
     <div id="gradiente">
     <div id="container_lista">
     
@@ -27,6 +27,12 @@ function Menu_Mobile() {
           </div>
         </Link>
 
+        <Link to={"/agenda"}>
+          <div className="row separar">
+              <h1 className="position"> agenda </h1>
+          </div>
+        </Link>
+
         <Link to={"/contactos"}>
           <div className="row">
               <h1 className="position"> contactos </h1>
@@ -40,4 +46,4 @@ function Menu_Mobile() {
   );
 }
 
-export default Menu_Mobile;
+export default MenuMobile;
