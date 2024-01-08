@@ -1,0 +1,52 @@
+#info-titulo {
+  position: relative;
+  display: inline-block;
+}
+
+#info-titulo > span {
+  font-weight: 200;
+}
+
+#info-rect {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 160px;
+  height: 52px;
+  background-color: #cee6c0;
+  z-index: -1;
+}
+
+#info-description {
+  margin: 5rem 0 8rem 0;
+}
+
+#info-imagem1,
+#info-imagem2,
+#info-imagem3 {
+  position: relative;
+  padding: 0 2rem;
+  height: 40vh;
+}
+
+#info-imagem3 {
+  margin-top: 5rem;
+}
+
+#info-imagem1 > p,
+#info-imagem2 > p,
+#info-imagem3 > p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+#info-imagem1 > img,
+#info-imagem2 > img,
+#info-imagem3 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
