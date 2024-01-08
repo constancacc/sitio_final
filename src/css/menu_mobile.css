@@ -1,0 +1,26 @@
+
+#hamburguer{
+    display:none;
+}
+
+@media (max-width: 480px) {
+    #localButton, #navLinks, #pesquisa_mobile {
+        display:none;
+    }
+
+    .col-lg-3{
+        width: 100%;
+    }
+    #logo_mobile{
+        margin: 3% auto;
+    }
+
+    #hamburguer{
+        display:inline-block;
+        padding: 1%;
+
+        position: absolute;
+        left: 2vw;
+        top: 2vw;
+    }
+  }

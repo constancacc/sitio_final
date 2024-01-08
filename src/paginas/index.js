@@ -1,6 +1,7 @@
 import "../css/index.css";
 import { Link } from "react-router-dom";
 
+
 function Index() {
   function click() {
     let pop_up = document.querySelector("#popup-zona");
