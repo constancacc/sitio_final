@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Galerias from "./paginas/Galerias.js";
 import Artistas from "./paginas/Artistas.js";
+import ArtistaInfo from "./paginas/ArtistaInfo.js";
 import Agenda from "./paginas/Agenda.js";
 import Destaques from "./paginas/Destaques.js";
 import Pesquisa from "./paginas/Pesquisa.js";
@@ -17,6 +18,7 @@ function AppRoutes() {
         <Route exact path="/" element={<Destaques />}></Route>
         <Route exact path="/galerias" element={<Galerias />}></Route>
         <Route exact path="/artistas" element={<Artistas />}></Route>
+        <Route exact path="/artista/:slug" element={<ArtistaInfo />}></Route>
         <Route exact path="/galeria"></Route>
         <Route exact path="/pesquisa" element={<Pesquisa />}></Route>
         <Route exact path="/agenda" element={<Agenda />}></Route>
