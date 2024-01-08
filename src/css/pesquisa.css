@@ -58,9 +58,15 @@
 
  #resultados_pesquisa{
   height: 70vh;
-  overflow-y: auto
+  overflow-y: auto;
+  overflow-x: hidden;
  }
  @media (max-width: 480px) {
+
+  #resultados_pesquisa{
+    height: 83vh;
+    overflow-y: auto
+   }
 
   .searchContainer{
     position: relative;
