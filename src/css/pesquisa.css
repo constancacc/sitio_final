@@ -56,6 +56,10 @@
   border-radius: 1vw;
  }
 
+ #resultados_pesquisa{
+  height: 70vh;
+  overflow-y: auto
+ }
  @media (max-width: 480px) {
 
   .searchContainer{

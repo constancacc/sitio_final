@@ -65,8 +65,9 @@ function Pesquisa() {
           />
         </div>
       </div>
+      <div id="resultados_pesquisa">
       {value &&
-        filteredPosts.slice(0, 2).map((post) => (
+        filteredPosts.map((post) => (
           console.log(post),
           <Link to={"/"+ post.type + "/" + post.slug} key={post.slug}>
           <div key={post.id} className="row list-element">
@@ -77,7 +78,7 @@ function Pesquisa() {
           </div>
           </Link>
         ))}
-
+    </div>
       <Footer />
     </div>
   );
