@@ -55,3 +55,35 @@
   
   border-radius: 1vw;
  }
+
+ #resultados_pesquisa{
+  height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+ }
+ @media (max-width: 480px) {
+
+  #resultados_pesquisa{
+    height: 83vh;
+    overflow-y: auto
+   }
+
+  .searchContainer{
+    position: relative;
+    width: 100%;
+  }
+
+
+    #icone_pesquisa{
+      position: absolute;
+      bottom: 4vw;
+      left: 4.5vw;
+    }
+
+    .barra_pesquisa{
+      bottom:0;
+      width:80%;
+      right: -12vw;
+      padding: 2%;
+    }
+ }

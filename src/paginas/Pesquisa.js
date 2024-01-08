@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { getAllArtists, getAllGalleries } from "../lib/cosmic.js";
+import { Link } from "react-router-dom";
+
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
-import "../css/pesquisa.css";
+
 import search from "../imagens/search2.svg";
+
+import "../css/pesquisa.css";
+
+
 
 function Pesquisa() {
   const [posts, setPosts] = useState([]);
@@ -19,7 +25,10 @@ function Pesquisa() {
         const fetchedGalleries = await getAllGalleries();
         const fetchedArtists = await getAllArtists();
 
-        const combinedPosts = [...fetchedGalleries, ...fetchedArtists];
+        const galleriesWithType = fetchedGalleries.map(galeria => ({ ...galeria, type: 'galeria' }));
+        const artistsWithType = fetchedArtists.map(artista => ({ ...artista, type: 'artista' }));
+
+        const combinedPosts = [...galleriesWithType, ...artistsWithType];
 
         setPosts(combinedPosts);
       } catch (error) {
@@ -56,16 +65,20 @@ function Pesquisa() {
           />
         </div>
       </div>
+      <div id="resultados_pesquisa">
       {value &&
-        filteredPosts.slice(0, 2).map((post) => (
+        filteredPosts.map((post) => (
+          console.log(post),
+          <Link to={"/"+ post.type + "/" + post.slug} key={post.slug}>
           <div key={post.id} className="row list-element">
             <div className="col-xs-12">
               <h1>{post.title}</h1>
               <hr />
             </div>
           </div>
+          </Link>
         ))}
-
+    </div>
       <Footer />
     </div>
   );

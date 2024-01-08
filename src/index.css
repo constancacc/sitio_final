@@ -104,3 +104,13 @@ a {
   display: inline-flex;
   justify-content: right;
 }
+
+
+@media (max-width: 480px) {
+  #barfooter{
+    display:none;
+  }
+  #root{
+    overflow-x: hidden;
+  }
+}

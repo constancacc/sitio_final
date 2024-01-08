@@ -237,6 +237,8 @@ right:25vw;
 
 #logo-mapa{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  margin: 3% auto;
+  height: 4.5vh;
 }
 
 /*mapa e scroll*/
@@ -256,7 +258,7 @@ right:25vw;
   font-size: 4vw;
   position: absolute;
   left: 0;
-  top: 5vw;
+  
   z-index: 2;
   background-color:#EE6C59;
   color: white;
