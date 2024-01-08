@@ -3,13 +3,12 @@ import Menu from "../componentes/Menu.js";
 import { Link } from "react-router-dom";
 
 
-
 import '../css/menu_mobile.css';
 
 function MenuMobile() {
   return (
     <div id="menucontainer">
-      <Menu id="sobrepor"/>
+      <Menu />
 
     <div id="gradiente">
     <div id="container_lista">
@@ -33,9 +32,9 @@ function MenuMobile() {
           </div>
         </Link>
 
-        <Link to={"/contactos"}>
+        <Link to={"/pesquisa"}>
           <div className="row">
-              <h1 className="position"> contactos </h1>
+              <h1 className="position"> pesquisa </h1>
           </div>
         </Link>
 

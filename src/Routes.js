@@ -4,7 +4,7 @@ import Artistas from "./paginas/Artistas.js";
 import Agenda from "./paginas/Agenda.js";
 import Destaques from "./paginas/Destaques.js";
 import Pesquisa from "./paginas/Pesquisa.js";
-import Index from "./paginas/index.js";
+import Index from "./paginas/Paginicial.js";
 import MenuMobile from "./paginas/Menu_mobile.js";
 
 function AppRoutes() {

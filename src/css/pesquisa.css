@@ -57,12 +57,23 @@
  }
 
  @media (max-width: 480px) {
-  
+
+  .searchContainer{
+    position: relative;
+    width: 100%;
+  }
+
+
     #icone_pesquisa{
-    bottom: -1.2vh;
+      position: absolute;
+      bottom: 4vw;
+      left: 4.5vw;
     }
 
     .barra_pesquisa{
-      bottom:0
+      bottom:0;
+      width:80%;
+      right: -12vw;
+      padding: 2%;
     }
  }
