@@ -55,3 +55,14 @@
   
   border-radius: 1vw;
  }
+
+ @media (max-width: 480px) {
+  
+    #icone_pesquisa{
+    bottom: -1.2vh;
+    }
+
+    .barra_pesquisa{
+      bottom:0
+    }
+ }
