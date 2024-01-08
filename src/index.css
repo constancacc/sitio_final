@@ -3,7 +3,7 @@ body {
   font-family: "Bellota Text", sans-serif;
   color: #000000;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -105,12 +105,11 @@ a {
   justify-content: right;
 }
 
-
 @media (max-width: 480px) {
-  #barfooter{
-    display:none;
+  #barfooter {
+    display: none;
   }
-  #root{
+  #root {
     overflow-x: hidden;
   }
 }

@@ -1,16 +1,17 @@
 #info-titulo {
   position: relative;
   display: inline-block;
+  margin-top: 2rem;
 }
 
-#info-titulo > span {
+#info-titulo > h1 > span {
   font-weight: 200;
 }
 
 #info-rect {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 50%;
   width: 160px;
   height: 52px;
   background-color: #cee6c0;
@@ -26,9 +27,9 @@
 #info-imagem3 {
   position: relative;
   padding: 0 2rem;
-  height: 40vh;
 }
 
+#info-imagem2,
 #info-imagem3 {
   margin-top: 5rem;
 }

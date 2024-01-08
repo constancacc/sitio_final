@@ -7,7 +7,7 @@ import Footer from "../componentes/Footer.js";
 
 import "../css/paginasInfo.css";
 
-function GaleriaInfo() {
+function ExposicaoInfo() {
   const { slug } = useParams();
   const [artist, setArtist] = useState({});
 
@@ -79,4 +79,4 @@ function GaleriaInfo() {
   );
 }
 
-export default GaleriaInfo;
+export default ExposicaoInfo;

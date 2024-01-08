@@ -1,88 +1,87 @@
 import { useEffect, useState } from "react";
-import { getAllArtists } from "../lib/cosmic.js";
+import { getArtistBySlug } from "../lib/cosmic.js";
 import { useParams } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
-import galeria from "../imagens/galeria.png";
 import "../css/paginasInfo.css";
 
 function ArtistaInfo() {
-  //   const { slug } = useParams();
-  //   const [posts, setPosts] = useState([]);
+  const { slug } = useParams();
+  const [artist, setArtist] = useState({});
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-  //   useEffect(() => {
-  //     async function fetchData() {
-  //       try {
-  //         const fetchedPosts = await getAllArtists();
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const fetchedArtist = await getArtistBySlug(slug);
 
-  //         console.log(fetchedPosts);
+        console.log(fetchedArtist);
 
-  //         setPosts(fetchedPosts);
-  //       } catch (error) {
-  //         console.error("Error fetching posts:", error);
-  //       }
-  //     }
-  //     fetchData();
-  //   }, []);
+        setArtist(fetchedArtist);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    }
+    fetchData();
+  }, [slug]);
 
   return (
     <div id="PagArtistaInfo">
       <Menu page="artistas" />
       <div className="info-container">
         <div className="row">
-          <div className="col-lg-1"></div>
-          <div className="col-lg-10">
+          <div className="col-lg-1 col-xs-1"></div>
+          <div className="col-lg-10 col-xs-10">
             <div id="info-container">
               <div className="row middle-lg">
                 <div className="col-lg-6">
                   <div id="info-titulo">
-                    <h1>Vhils</h1>
+                    <h1>{artist.title}</h1>
                     <div id="info-rect"></div>
                   </div>
                   <div id="info-description">
-                    <p>
-                      O trabalho de Vhils faz parte da chamada Street Art ou
-                      arte urbana, cuja popularidade explodiu justamente graças
-                      ao graffiti dos anos 1970 em Nova York.
-                      <br />
-                      <br />
-                      Como toda arte, o graffiti é uma expressão pessoal e
-                      subjetiva que pode assumir a forma de rubrica, protesto
-                      político-social ou procurar um propósito puramente
-                      estético.
-                    </p>
+                    <p>{artist.metadata?.biografia}</p>
                   </div>
                   <div id="info-imagem1">
-                    <img src={galeria} />
-                    <p>exposição tal e tal</p>
+                    <img
+                      src={artist.metadata?.imagem1.imagem.url}
+                      onLoad={() => setImageLoaded(true)}
+                    />
+                    {imageLoaded && <p>{artist.metadata?.imagem1.legenda}</p>}
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div id="info-imagem2">
-                    <img src={galeria} />
-                    <p>exposição tal e tal</p>
+                    <img
+                      src={artist.metadata?.imagem2.imagem.url}
+                      onLoad={() => setImageLoaded(true)}
+                    />
+                    {imageLoaded && <p>{artist.metadata?.imagem2.legenda}</p>}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-1"></div>
+          <div className="col-lg-1 col-xs-1"></div>
         </div>
         <div className="row">
-          <div className="col-lg-1"></div>
-          <div className="col-lg-10">
+          <div className="col-lg-1 col-xs-1"></div>
+          <div className="col-lg-10 col-xs-10">
             <div className="row end-lg">
               <div className="col-lg-8">
                 <div id="info-imagem3">
-                  <img src={galeria} />
-                  <p>exposição tal e tal</p>
+                  <img
+                    src={artist.metadata?.imagem3.imagem.url}
+                    onLoad={() => setImageLoaded(true)}
+                  />
+                  {imageLoaded && <p>{artist.metadata?.imagem3.legenda}</p>}
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-xs-1"></div>
+          <div className="col-lg-1 col-xs-1"></div>
         </div>
       </div>
       <Footer />
