@@ -4,15 +4,15 @@
 }
 
 @media (max-width: 480px) {
-    #localButton, #navLinks, #pesquisa_mobile {
+  #localButton, #navLinks, #pesquisa_mobile {
         display:none;
     }
-
-    .col-lg-3{
-        width: 100%;
+    #logo_container_mobile{
+        width:100vw;
     }
     #logo_mobile{
-        margin: 3% auto;
+        padding: 4vw;
+        margin:  auto;
     }
 
     #hamburguer{
@@ -23,4 +23,22 @@
         left: 2vw;
         top: 2vw;
     }
-  }
+
+    #gradiente{
+       height: 93.3vh;
+        background-image: url('../imagens/gradiente.svg');
+        background-size: cover; /* ou 'contain' dependendo do efeito desejado */
+        background-repeat: no-repeat;
+    }
+
+    #container_lista{
+        position: relative;
+        top: 50vw;
+    }
+    .separar{
+        border-bottom: 1px solid black;
+    }
+    .position{
+        margin: 5%;
+    }
+}

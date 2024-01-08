@@ -5,6 +5,7 @@ import Agenda from "./paginas/Agenda.js";
 import Destaques from "./paginas/Destaques.js";
 import Pesquisa from "./paginas/Pesquisa.js";
 import Index from "./paginas/index.js";
+import Menu_Mobile from "./paginas/Menu_mobile.js";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
         <Route exact path="/galeria"></Route>
         <Route exact path="/pesquisa" element={<Pesquisa />}></Route>
         <Route exact path="/agenda" element={<Agenda />}></Route>
+        <Route exact path="/menu" element={<Menu_Mobile />}></Route>
       </Routes>
     </Router>
   );
