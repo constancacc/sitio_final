@@ -16,8 +16,10 @@ function Destaques() {
         <div className="col-lg-1"></div>
         <div className="row col-lg-11">
           <div className="title">
-            <h3 className="galPrin">Galerias Principais</h3>
-            <div className="rect1"></div>
+            <h3 className="galPrin">Galerias Principais
+            <div className="rect rect1" />
+            </h3>
+            
           </div>
         </div>
       </div>
@@ -88,8 +90,9 @@ function Destaques() {
         <div className="col-lg-1"></div>
         <div className="row col-lg-11">
           <div className="title">
-            <h3 className="galPrin">Artistas em Destaque</h3>
-            <div className="rect2"></div>
+            <h3 className="galPrin">Artistas em Destaque
+            <div className="rect rect2"></div>
+            </h3>
           </div>
         </div>
       </div>
@@ -100,8 +103,9 @@ function Destaques() {
         <div className="col-lg-1"></div>
         <div className="row col-lg-11">
           <div className="title">
-            <h3 className="galPrin">Exposições em Destaque</h3>
-            <div className="rect3"></div>
+            <h3 className="galPrin">Exposições em Destaque
+            <div className="rect rect3"></div>
+            </h3>
           </div>
         </div>
       </div>

@@ -6,23 +6,39 @@
   .carousel-content3 {
     width: 97%;
     background-color: #8AB2DD; 
+    min-height: 750px;
+    overflow: hidden;
   }
 
   .exposicao{
     position: relative;
     width: 100%;
-  }
-
-  .icons{
-    margin-right: 5px;
+    height: 400px;
+    object-fit: cover;
   }
   
   .galeria {
     padding: 0 10%;
   }
   
-  .dados {
+  .dados3{
+    display:grid;
+    padding: 0 10%;
+  }
+
+  .dados-itens3Location{
+    display: inline-flex;
+    padding-left: 1%;
+  }
+  
+  .dados-itens3{
     display: inline-flex;
   }
   
-  /* Adicione mais estilos conforme necessário */ 
+  
+  @media screen and (max-width: 1024px) {
+    .carousel-content3{
+      min-height: 800px;
+    }
+  
+  }

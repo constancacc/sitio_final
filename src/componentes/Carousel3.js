@@ -14,6 +14,7 @@ const Carousel = () => {
   const [posts, setPosts] = useState([]);
   const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
 
+
   const settings = {
     centerMode: true,
     centerPadding: '20%',
@@ -21,13 +22,13 @@ const Carousel = () => {
     slidesToShow: slidesToShow,
     speed: 1500,
     focusOnSelect: true,
-    dots: true, 
-    autoplay: true, 
-    autoplaySpeed: 5000, 
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
-  
- 
+
+
   function calculateSlidesToShow() {
     const windowWidth = window.innerWidth;
 
@@ -39,39 +40,46 @@ const Carousel = () => {
       return 3; // Larger screens
     }
   }
- 
+
+  
   useEffect(() => {
     function handleResize() {
-      setSlidesToShow(calculateSlidesToShow());
+       setSlidesToShow(calculateSlidesToShow());
     }
   
     window.addEventListener("resize", handleResize);
   
-    return () => {
-      window.removeEventListener("resize", handleResize);
+ return () => {
+       window.removeEventListener("resize", handleResize);
     };
-  
+  }, []); 
+
+
+  useEffect(() => {
+
     async function fetchData() {
       try {
         const fetchedPosts = await getAllExhibitions();
         console.log("Fetched Posts:", fetchedPosts);
-  
+
         const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
         console.log("Destaques Posts:", destaquesPosts);
-  
+
         setPosts(destaquesPosts);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     }
-  
+
     fetchData();
   }, []);
-  
-  
+
+
 
   return (
+    
     <Slider {...settings}>
+      
       {posts.map((post) => (
         <div key={post.id} className="carousel-item">
           <div className="carousel-content3">
@@ -85,11 +93,16 @@ const Carousel = () => {
                 )}
               </div>
               <Divider />
-              <div className="dados">
+              <div className="dados3">
+                <div className="dados-itens3Location">
                 <img src={location} alt="location" className="icons" />
                 <p>{post.metadata.localizacao}</p>
+                </div>
+                <div className="dados-itens3">
                 <img src={clock} alt="clock" className="icons" />
                 <p>{post.metadata.horario}</p>
+                </div>
+                
               </div>
             </div>
           </div>

@@ -1,31 +1,28 @@
-.rect1 {
+
+
+.rect{
   width: 160px;
   height: 52px;
-  background-color: #f89668;
-  position: absolute;
   z-index: -1;
-  top: 180px;
-  left: 19.5%;
+  
+}
+
+.rect1 {
+  background-color: #f89668;
+  margin-top: -7%;
+  margin-left: 70%;
 }
 
 .rect2 {
-  width: 160px;
-  height: 52px;
   background-color: #cee6c0;
-  position: absolute;
-  z-index: -1;
-  top: 97.3%;
-  left: 22.5%;
+  margin-top: -6%;
+  margin-left: 75%;
 }
 
 .rect3 {
-  width: 160px;
-  height: 52px;
   background-color: #8ab2dd;
-  position: absolute;
-  z-index: -1;
-  top: 157.5%;
-  left: 25.8%;
+  margin-top: -5%;
+  margin-left: 78%;
 }
 
 .galeria {
