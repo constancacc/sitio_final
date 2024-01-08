@@ -6,18 +6,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/carousel3.css";
 
-import location from '../imagens/location.svg';
-import clock from '../imagens/Clock.svg';
-import Divider from './Divider.js'
+import location from "../imagens/location.svg";
+import clock from "../imagens/Clock.svg";
+import Divider from "./Divider.js";
 
 const Carousel = () => {
   const [posts, setPosts] = useState([]);
   const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
 
-
   const settings = {
     centerMode: true,
-    centerPadding: '20%',
+    centerPadding: "20%",
     infinite: true,
     slidesToShow: slidesToShow,
     speed: 1500,
@@ -26,8 +25,6 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 5000,
   };
-
-
 
   function calculateSlidesToShow() {
     const windowWidth = window.innerWidth;
@@ -41,28 +38,27 @@ const Carousel = () => {
     }
   }
 
-  
   useEffect(() => {
     function handleResize() {
-       setSlidesToShow(calculateSlidesToShow());
+      setSlidesToShow(calculateSlidesToShow());
     }
-  
-    window.addEventListener("resize", handleResize);
-  
- return () => {
-       window.removeEventListener("resize", handleResize);
-    };
-  }, []); 
 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
-
     async function fetchData() {
       try {
         const fetchedPosts = await getAllExhibitions();
         console.log("Fetched Posts:", fetchedPosts);
 
-        const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
+        const destaquesPosts = fetchedPosts.filter(
+          (post) => post.metadata.destaque === true,
+        );
         console.log("Destaques Posts:", destaquesPosts);
 
         setPosts(destaquesPosts);
@@ -74,17 +70,17 @@ const Carousel = () => {
     fetchData();
   }, []);
 
-
-
   return (
-    
     <Slider {...settings}>
-      
       {posts.map((post) => (
         <div key={post.id} className="carousel-item">
           <div className="carousel-content3">
             <div className="tabLink">
-              <img src={post.metadata.imagem1.url} alt='exposicao' className="exposicao" />
+              <img
+                src={post.metadata.imagem1.imagem.url}
+                alt="exposicao"
+                className="exposicao"
+              />
               <div className="galeria">
                 {slidesToShow <= 1 ? (
                   <h3>{post.title}</h3>
@@ -95,18 +91,16 @@ const Carousel = () => {
               <Divider />
               <div className="dados3">
                 <div className="dados-itens3Location">
-                <img src={location} alt="location" className="icons" />
-                <p>{post.metadata.localizacao}</p>
+                  <img src={location} alt="location" className="icons" />
+                  <p>{post.metadata.localizacao}</p>
                 </div>
                 <div className="dados-itens3">
-                <img src={clock} alt="clock" className="icons" />
-                <p>{post.metadata.horario}</p>
+                  <img src={clock} alt="clock" className="icons" />
+                  <p>{post.metadata.horario}</p>
                 </div>
-                
               </div>
             </div>
           </div>
-
         </div>
       ))}
     </Slider>

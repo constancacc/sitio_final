@@ -93,7 +93,7 @@ function Agenda() {
                       <div>
                         <div>
                           <img
-                            src={post.metadata.imagem1.url}
+                            src={post.metadata.imagem1.imagem.url}
                             alt="exposição"
                             className="agenda-imagem"
                           />
