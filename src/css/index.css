@@ -2,11 +2,6 @@
 
 /*----------- DESKTOP ---------------*/
 
-.body{
-  margin:0;
-  overflow-x: hidden;
-}
-
 /* DENTRO DA GRELHA */
 #logo-mapa svg{
   margin: 1% auto;
@@ -245,7 +240,7 @@ right:25vw;
 
 #svg-scroll{
   width: 300vw;
-  height: 95vh;
+  height: 92vh;
 }
 #mapa{
   width:100%;
