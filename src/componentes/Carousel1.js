@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getAllGalleries } from "../lib/cosmic.js";
 
+import { Link } from "react-router-dom";
+
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -45,31 +47,31 @@ const Carousel = () => {
   }, []);
 
   return (
+
     <Slider {...settings}>
       {posts.map((post) => (
-
-        <div key={post.id} className="carousel-item">
-
-          <div className="carousel-content">
-
-            <img src={post.metadata.imagem_galeria.url} alt='galeria' className="galeriaImage" />
-            <div className="galeria">
-              <h3>{post.title}</h3>
-            </div>
-            <Divider />
-            <div className="dados">
-              <img src={location} alt="location" className="icons" />
-              <p>{post.metadata.localizacao_galeria}</p>
-              <img src={clock} alt="clock" className="icons" />
-              <p>{post.metadata.horario_galeria}</p>
+        <Link to={"/galeria/" + post.slug} className="button-link">
+          <div key={post.id} className="carousel-item">
+            <div className="carousel-content">
+              <img src={post.metadata.imagem_galeria.url} alt='galeria' className="galeriaImage" />
+              <div className="galeria">
+                <h3>{post.title}</h3>
+              </div>
+              <Divider />
+              <div className="dados">
+                <img src={location} alt="location" className="icons" />
+                <p>{post.metadata.localizacao_galeria}</p>
+                <img src={clock} alt="clock" className="icons" />
+                <p>{post.metadata.horario_galeria}</p>
+              </div>
             </div>
           </div>
-
-
-        </div>
+        </Link>
       ))}
 
     </Slider>
+
+
   );
 };
 

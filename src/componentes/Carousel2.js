@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { getAllArtists } from "../lib/cosmic.js";
-import '../css/carousel2.css'; // Certifique-se de ter estilos adequados para a grade
+
+import { Link } from "react-router-dom";
+
+import '../css/carousel2.css';
 
 export default function App() {
     const [posts, setPosts] = useState([]);
@@ -29,6 +32,7 @@ export default function App() {
                 {posts.map((post) => {
               
                     return (
+                        
                         <div
                             key={post._id}
                             className='grid-item'

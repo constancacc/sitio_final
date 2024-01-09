@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllExhibitions } from "../lib/cosmic.js";
 
+import { Link } from "react-router-dom";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -73,6 +75,7 @@ const Carousel = () => {
   return (
     <Slider {...settings}>
       {posts.map((post) => (
+        <Link to={"/exposicao/" + post.slug} key={post.slug}>
         <div key={post.id} className="carousel-item">
           <div className="carousel-content3">
             <div className="tabLink">
@@ -102,6 +105,7 @@ const Carousel = () => {
             </div>
           </div>
         </div>
+        </Link>
       ))}
     </Slider>
   );
