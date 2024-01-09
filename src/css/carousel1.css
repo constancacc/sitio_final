@@ -28,3 +28,15 @@
   padding: 0 10%;
   display: inline-flex;
 }
+
+@media screen and (max-width: 881px) {
+  .carousel-content{
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 831px) {
+  .carousel-content{
+    height: 650px;
+  }
+}

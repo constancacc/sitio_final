@@ -4,7 +4,6 @@
   width: 160px;
   height: 52px;
   z-index: -1;
-  
 }
 
 .rect1 {
@@ -29,6 +28,14 @@
   position: relative;
   display: inline-block;
 }
+
+@media screen and (max-width: 881px) {
+  .carousel1{
+    margin-bottom: 5%;
+  }
+}
+
+
 
 @media screen and (max-width: 2000px) {
   .image-grid {

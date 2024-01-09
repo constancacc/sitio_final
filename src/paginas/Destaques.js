@@ -21,8 +21,11 @@ function Destaques() {
           </div>
         </div>
       </div>
+    
+        <div className="carousel1">
+        <Carousel1 />
+        </div>
 
-      <Carousel1 />
 
       <div className="row">
         <div className="col-lg-1 col-xs-1"></div>
