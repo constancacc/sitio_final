@@ -62,7 +62,7 @@ export async function getExhibitionsBySlug(exhibitionsSlug) {
       type: "exposicoes",
       slug: exhibitionsSlug,
     })
-    .props("id,slug,title,metadata")
+    .props("id,type,slug,title,metadata")
     .depth(1);
 
   return data.object;

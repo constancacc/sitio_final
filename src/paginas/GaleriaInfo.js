@@ -28,7 +28,7 @@ function GaleriaInfo() {
 
   return (
     <div id="PagArtistaInfo">
-      <Menu page="artistas" />
+      <Menu page="galerias" />
       <div className="info-container">
         <div className="row">
           <div className="col-lg-1 col-xs-1"></div>
