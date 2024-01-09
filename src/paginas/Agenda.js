@@ -126,7 +126,9 @@ function Agenda() {
                       )}
                     </Slider>
                   ) : (
-                    <p id="agenda-mensagem">Ainda sem exposições programadas</p>
+                    <p id="agenda-mensagem">
+                      Ainda sem exposições programadas.
+                    </p>
                   )}
                 </div>
                 <div className="col-xs-3"></div>
