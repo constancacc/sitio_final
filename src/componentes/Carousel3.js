@@ -75,37 +75,49 @@ const Carousel = () => {
   return (
     <Slider {...settings}>
       {posts.map((post) => (
-        <Link to={"/exposicao/" + post.slug} key={post.slug}>
-        <div key={post.id} className="carousel-item">
-          <div className="carousel-content3">
-            <div className="tabLink">
-              <img
-                src={post.metadata.imagem1.imagem.url}
-                alt="exposicao"
-                className="exposicao"
-              />
-              <div className="galeria">
-                {slidesToShow <= 1 ? (
-                  <h3>{post.title}</h3>
-                ) : (
-                  <h4>{post.title}</h4>
-                )}
-              </div>
-              <Divider />
-              <div className="dados3">
-                <div className="dados-itens3Location">
-                  <img src={location} alt="location" className="icons" />
-                  <p>{post.metadata.localizacao}</p>
-                </div>
-                <div className="dados-itens3">
-                  <img src={clock} alt="clock" className="icons" />
-                  <p>{post.metadata.horario}</p>
-                </div>
-              </div>
+        <div className="row">
+          <Link to={"/exposicao/" + post.slug} key={post.slug}>
+            <div key={post.id} className="carousel-item">
+              <div className="carousel-content3">
+                <div className="tabLink">
+                  <img
+                    src={post.metadata.imagem1.imagem.url}
+                    alt="exposicao"
+                    className="exposicao"
+                  />
+                  <div className="galeria3">
+                    {slidesToShow <= 2 ? (
+                      <h4>{post.title}</h4>
+
+                    ) : (
+                      <h3>{post.title}</h3>
+                    )}
+                  </div>
+                  <Divider />
+         
+
+                        <div className="dados3">
+
+                          <div className="dados-itens3Location">
+                            <img src={location} alt="location" className="icons" />
+                            <p>{post.metadata.localizacao}</p>
+                          </div>
+
+                          <div className="dados-itens3">
+                            <img src={clock} alt="clock" className="icons" />
+                            <p>{post.metadata.horario}</p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
             </div>
-          </div>
+          </Link>
         </div>
-        </Link>
+
       ))}
     </Slider>
   );
