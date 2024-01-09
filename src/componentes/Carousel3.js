@@ -31,7 +31,7 @@ const Carousel = () => {
   function calculateSlidesToShow() {
     const windowWidth = window.innerWidth;
 
-    if (windowWidth <= 600) {
+    if (windowWidth <= 700) {
       return 1; // Small screens
     } else if (windowWidth <= 1400) {
       return 2;
