@@ -33,7 +33,11 @@
 @media screen and (max-width: 2000px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr); 
-    
   }
+}
 
+@media screen and (max-width: 540px) {
+  .rect3{
+    margin-left: 16%;
+  }
 }

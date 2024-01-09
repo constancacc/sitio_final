@@ -46,7 +46,6 @@
   .image-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .grid-item .caption {
     display: block;
     top: 70%;
@@ -58,6 +57,17 @@
     margin-top: 5%;
     /* Ajuste conforme necessário para reduzir o espaço */
   }
+}
 
+@media screen and (max-width: 830px) {
+  .grid-item .caption .textCaption h5 {
+    font-size: 1rem;
+    /* Ajuste conforme necessário para reduzir o espaço */
+  }
+}
 
+@media screen and (max-width: 550px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

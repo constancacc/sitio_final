@@ -11,10 +11,9 @@ function Destaques() {
   return (
     <div id="PagDestaques">
       <Menu page="index" />
-
       <div className="row">
         <div className="col-lg-1 col-xs-1"></div>
-        <div className="row col-lg-11 ">
+        <div className="row col-lg-11 col-xs-11">
           <div className="title">
             <h3>Galerias Principais
               <div className="rect rect1" />
@@ -27,7 +26,7 @@ function Destaques() {
 
       <div className="row">
         <div className="col-lg-1 col-xs-1"></div>
-        <div className="row col-lg-11">
+        <div className="row col-lg-11 col-xs-11">
           <div className="title">
             <h3>Artistas em Destaque
               <div className="rect rect2"></div>
@@ -40,7 +39,7 @@ function Destaques() {
 
       <div className="row">
         <div className="col-lg-1 col-xs-1"></div>
-        <div className="row col-lg-11">
+        <div className="row col-lg-11 col-xs-10">
           <div className="title">
             <h3>Exposições em Destaque
               <div className="rect rect3"></div>
@@ -48,6 +47,7 @@ function Destaques() {
           </div>
         </div>
       </div>
+
       <Carousel3 />
 
       {/* <div className="row tab1">
