@@ -1,3 +1,7 @@
+.lista-galeria{
+  height: 70vh;
+}
+
 .galeria-list-element {
   cursor: pointer;
 }

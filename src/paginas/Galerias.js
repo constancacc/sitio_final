@@ -46,7 +46,9 @@ function Galerias() {
   return (
     <div id="PagDestaques" onMouseMove={imagePosition}>
       <Menu page="galerias" />
+      <div className="lista-galeria">
       {posts.map((post) => (
+        
         <div
           key={post.id}
           className={`row galeria-list-element ${
@@ -87,7 +89,9 @@ function Galerias() {
             <hr />
           </div>
         </div>
+        
       ))}
+      </div>
       <Footer />
     </div>
   );
