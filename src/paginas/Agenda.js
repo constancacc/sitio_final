@@ -35,7 +35,7 @@ function Agenda() {
   const settings = {
     centerMode: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     speed: 1500,
     focusOnSelect: true,
     centerPadding: "2%",

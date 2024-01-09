@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Galerias from "./paginas/Galerias.js";
 import GaleriaInfo from "./paginas/GaleriaInfo.js";
 import Artistas from "./paginas/Artistas.js";
@@ -14,8 +15,6 @@ function AppRoutes() {
   return (
     <Router>
       <Routes>
-        {/* */}
-
         <Route exact path="/" element={<Index />}></Route>
         <Route exact path="/destaques" element={<Destaques />}></Route>
         <Route exact path="/galerias" element={<Galerias />}></Route>
