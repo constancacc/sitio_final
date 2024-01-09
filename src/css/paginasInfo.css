@@ -82,3 +82,23 @@
 #info-date > p {
   margin-left: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  #info-imagem1,
+  #info-imagem2,
+  #info-imagem3 {
+    position: relative;
+    padding: 0;
+  }
+
+  #info-imagem1 > p,
+  #info-imagem2 > p,
+  #info-imagem3 > p {
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: rotate(0);
+  }
+}
