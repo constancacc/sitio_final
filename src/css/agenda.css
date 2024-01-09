@@ -1,3 +1,7 @@
+#agenda-mensagem {
+  text-align: center;
+}
+
 .agenda-list-element {
   cursor: pointer;
 }
