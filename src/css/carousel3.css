@@ -47,9 +47,20 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1037px) {
   .carousel-content3 {
     padding-bottom: 15%;
   }
+}
 
+@media screen and (max-width: 1024px) {
+  .carousel-content3 {
+    padding-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .carousel-content3 {
+    padding-bottom: 30%;
+  }
 }

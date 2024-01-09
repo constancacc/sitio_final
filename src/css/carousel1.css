@@ -40,3 +40,21 @@
     height: 650px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .carousel-content{
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-content{
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .carousel-content{
+    height: 800px;
+  }
+}
