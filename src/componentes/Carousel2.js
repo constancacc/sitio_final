@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { getAllArtists } from "../lib/cosmic.js";
-import '../css/carousel2.css'; // Certifique-se de ter estilos adequados para a grade
+
+import { Link } from "react-router-dom";
+
+import '../css/carousel2.css';
 
 export default function App() {
     const [posts, setPosts] = useState([]);
@@ -29,10 +32,9 @@ export default function App() {
                 {posts.map((post) => {
               
                     return (
-                        <div
-                            key={post._id}
-                            className='grid-item'
-                        >
+                        <Link to={"/artista/" + post.slug} key={post.slug} className='grid-item'>
+
+                      
                             <img
                                 src={post.metadata.imagem_artista.url}
                                 alt={post.title}
@@ -43,7 +45,8 @@ export default function App() {
                                     <h6>{post.metadata.idade}</h6>
                                 </div>
                             </div>
-                        </div>
+                  
+                        </Link>
                     );
                 })}
             </div>

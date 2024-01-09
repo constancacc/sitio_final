@@ -4,14 +4,8 @@
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 16px; 
-}
-
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  
 }
 
 .image-grid img {
@@ -22,9 +16,15 @@
   border-radius: 5px;
 }
 
+.grid-item {
+  position: relative;
+   
+}
+
 .caption {
   display: none;
   position: absolute;
+  overflow: hidden;
   bottom: 0;
   left: 0;
   width: 100%;

@@ -1,5 +1,5 @@
-import "../css/destaques.css";
 
+import "../css/destaques.css";
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
