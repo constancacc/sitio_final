@@ -16,15 +16,6 @@ function Agenda() {
   const [activeMonth, setActiveMonth] = useState(null);
 
   useEffect(() => {
-    console.log("Agenda component mounted");
-    return () => {
-      console.log("Agenda component unmounted");
-    };
-  }, []);
-
-  console.log("Agenda component rendered");
-
-  useEffect(() => {
     async function fetchData() {
       try {
         const fetchedPosts = await getAllExhibitions();
