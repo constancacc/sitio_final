@@ -16,11 +16,18 @@ function Agenda() {
   const [activeMonth, setActiveMonth] = useState(null);
 
   useEffect(() => {
+    console.log("Agenda component mounted");
+    return () => {
+      console.log("Agenda component unmounted");
+    };
+  }, []);
+
+  console.log("Agenda component rendered");
+
+  useEffect(() => {
     async function fetchData() {
       try {
         const fetchedPosts = await getAllExhibitions();
-
-        console.log(fetchedPosts);
 
         setExhibitions(fetchedPosts);
       } catch (error) {
@@ -31,7 +38,7 @@ function Agenda() {
   }, []);
 
   const toggleCarousel = (month) => {
-    setActiveMonth(activeMonth === month ? null : month);
+    setActiveMonth(month === activeMonth ? null : month);
   };
 
   const settings = {
@@ -62,10 +69,29 @@ function Agenda() {
     "dezembro",
   ];
 
+  const filterExhibitionsByMonth = (exhibitions, targetMonth) => {
+    return exhibitions.filter((exhibition) => {
+      const exhibitionStartDate = exhibition.metadata.data_inicio;
+      const exhibitionEndDate = exhibition.metadata.data_fim;
+
+      const [exhibitionStartYear, exhibitionStartMonth] = exhibitionStartDate
+        .split("-")
+        .slice(0, 2);
+      const [exhibitionEndYear, exhibitionEndMonth] = exhibitionEndDate
+        .split("-")
+        .slice(0, 2);
+
+      const startMonth = parseInt(exhibitionStartMonth);
+      const endMonth = parseInt(exhibitionEndMonth);
+
+      return targetMonth >= startMonth && targetMonth <= endMonth;
+    });
+  };
+
   return (
     <div id="PagAgenda">
       <Menu page="agenda" />
-      {months.map((month) => (
+      {months.map((month, index) => (
         <div key={month} className="month">
           <div
             className={`row agenda-list-element ${
@@ -88,18 +114,16 @@ function Agenda() {
 
               <div className="row agenda-carousel">
                 <Slider {...settings}>
-                  {posts.map((post) => (
+                  {filterExhibitionsByMonth(posts, index + 1).map((post) => (
                     <Link to={"/exposicao/" + post.slug} key={post.slug}>
                       <div>
-                        <div>
-                          <img
-                            src={post.metadata.imagem1.imagem.url}
-                            alt="exposição"
-                            className="agenda-imagem"
-                          />
-                          <div className="agenda-nome-exposicao">
-                            <h6>{post.title}</h6>
-                          </div>
+                        <img
+                          src={post.metadata.imagem1.imagem.url}
+                          alt="exposição"
+                          className="agenda-imagem"
+                        />
+                        <div className="agenda-nome-exposicao">
+                          <h6>{post.title}</h6>
                         </div>
                       </div>
                     </Link>
