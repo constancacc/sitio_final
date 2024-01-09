@@ -30,22 +30,20 @@ export default function App() {
         <div className='image-gallery-container'>
             <div className='image-grid'>
                 {posts.map((post) => {
-              
-                    return (
-                        <Link to={"/artista/" + post.slug} key={post.slug} className='grid-item'>
 
-                      
+                    return (
+                        <Link to={"/artista/" + post.slug}
+                            key={post.slug}
+                            className='grid-item'>
                             <img
                                 src={post.metadata.imagem_artista.url}
                                 alt={post.title}
                             />
-                            <div className='caption'>
+                            <div className='col-lg-12 caption'>
                                 <div className='textCaption'>
                                     <h5>{post.title}</h5>
-                                    <h6>{post.metadata.idade}</h6>
                                 </div>
                             </div>
-                  
                         </Link>
                     );
                 })}

@@ -5,7 +5,7 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 16px; 
+  gap: 16px;
 }
 
 .image-grid img {
@@ -34,7 +34,7 @@
 }
 
 .textCaption {
-  margin-left: 5%;
+  padding-left: 5%;
 }
 
 .grid-item:hover .caption {
@@ -44,12 +44,20 @@
 
 @media screen and (max-width: 1024px) {
   .image-grid {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid-item .caption{
+  .grid-item .caption {
     display: block;
-    color: white;
+    top: 70%;
+    height: 30%;
+    background-color: #cee6c071;
   }
+
+  .grid-item .caption .textCaption h5 {
+    margin-top: 5%;
+    /* Ajuste conforme necessário para reduzir o espaço */
+  }
+
 
 }

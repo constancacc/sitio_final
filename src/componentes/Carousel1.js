@@ -61,7 +61,7 @@ const Carousel = () => {
               <div className="dados">
                 <img src={location} alt="location" className="icons" />
                 <p>{post.metadata.localizacao_galeria}</p>
-                <img src={clock} alt="clock" className="icons" />
+                <img src={clock} alt="clock" className="iconsClock" />
                 <p>{post.metadata.horario_galeria}</p>
               </div>
             </div>
