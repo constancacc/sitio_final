@@ -17,7 +17,6 @@ function Index() {
   }
 
   return (
-    <div className="body">
       <div className="container_index">
         <div className="row" id="logo-mapa">
           <svg
@@ -387,7 +386,6 @@ function Index() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
