@@ -104,22 +104,32 @@ function Agenda() {
               </div>
 
               <div className="row agenda-carousel">
-                <Slider {...settings}>
-                  {filterExhibitionsByMonth(posts, index + 1).map((post) => (
-                    <Link to={"/exposicao/" + post.slug} key={post.slug}>
-                      <div>
-                        <img
-                          src={post.metadata.imagem1.imagem.url}
-                          alt="exposição"
-                          className="agenda-imagem"
-                        />
-                        <div className="agenda-nome-exposicao">
-                          <h6>{post.title}</h6>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </Slider>
+                <div className="col-xs-3"></div>
+                <div className="col-xs-6">
+                  {filterExhibitionsByMonth(posts, index + 1).length > 0 ? (
+                    <Slider {...settings}>
+                      {filterExhibitionsByMonth(posts, index + 1).map(
+                        (post) => (
+                          <Link to={"/exposicao/" + post.slug} key={post.slug}>
+                            <div>
+                              <img
+                                src={post.metadata.imagem1.imagem.url}
+                                alt="exposição"
+                                className="agenda-imagem"
+                              />
+                              <div className="agenda-nome-exposicao">
+                                <h6>{post.title}</h6>
+                              </div>
+                            </div>
+                          </Link>
+                        ),
+                      )}
+                    </Slider>
+                  ) : (
+                    <p id="agenda-mensagem">Ainda sem exposições programadas</p>
+                  )}
+                </div>
+                <div className="col-xs-3"></div>
               </div>
             </>
           )}

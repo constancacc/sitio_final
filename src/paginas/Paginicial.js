@@ -130,7 +130,7 @@ function Index() {
                 <img
                   id="ret_zona"
                   width="40%"
-                  src="imagens/mapa/zona.svg"
+                  src="imagens_index/mapa/zona.svg"
                   alt="zona"
                 />
               </div>
@@ -164,7 +164,7 @@ function Index() {
                 <img
                   id="ret_artista"
                   width="40%"
-                  src="imagens/mapa/artista.svg"
+                  src="imagens_index/mapa/artista.svg"
                   alt="artista"
                 />
               </div>
@@ -175,14 +175,14 @@ function Index() {
             <img
               className="distrito"
               id="aveiro"
-              src="imagens/mapa/Aveiro.png"
+              src="imagens_index/mapa/Aveiro.png"
               alt="Aveiro"
             />
             <img
               className="dot av_text"
               onClick={indisponivel}
               id="dotaveiro"
-              src="imagens/mapa/dot.svg"
+              src="imagens_index/mapa/dot.svg"
               alt="dot_aveiro"
             />
             <p className="titulo av_text" onClick={indisponivel}>
@@ -193,7 +193,7 @@ function Index() {
             <img
               className="distrito"
               id="viseu"
-              src="imagens/mapa/Viseu.png"
+              src="imagens_index/mapa/Viseu.png"
               alt="Viseu"
             />
             <p className="titulo vs_text" onClick={indisponivel}>
@@ -203,14 +203,14 @@ function Index() {
             <img
               className="dot vs_text"
               onClick={indisponivel}
-              src="imagens/mapa/dot2.svg"
+              src="imagens_index/mapa/dot2.svg"
               alt="dot_viseu"
             />
 
             <img
               className="distrito"
               id="guarda"
-              src="imagens/mapa/Guarda.png"
+              src="imagens_index/mapa/Guarda.png"
               alt="Guarda"
             />
             <p className="titulo gd_text" onClick={indisponivel}>
@@ -220,7 +220,7 @@ function Index() {
             <img
               className="dot gd_text"
               onClick={indisponivel}
-              src="imagens/mapa/dot2.svg"
+              src="imagens_index/mapa/dot2.svg"
               alt="dot_guarda"
             />
           </div>
@@ -228,14 +228,14 @@ function Index() {
             <img
               className="distrito"
               id="coimbra"
-              src="imagens/mapa/Coimbra.png"
+              src="imagens_index/mapa/Coimbra.png"
               alt="Coimbra"
             />
             <Link class="link" to="/destaques">
               <img
                 className="dot co_text"
                 id="dotcoimbra"
-                src="imagens/mapa/dot.svg"
+                src="imagens_index/mapa/dot.svg"
                 alt="dot_coimbra"
               />
               <p className="titulo co_text"> Coimbra </p>
@@ -246,7 +246,7 @@ function Index() {
             <img
               className="distrito"
               id="leiria"
-              src="imagens/mapa/Leiria.png"
+              src="imagens_index/mapa/Leiria.png"
               alt="Leiria"
             />
             <p className="titulo lr_text" onClick={indisponivel}>
@@ -256,14 +256,14 @@ function Index() {
             <img
               className="dot lr_text"
               onClick={indisponivel}
-              src="imagens/mapa/dot 3.svg"
+              src="imagens_index/mapa/dot 3.svg"
               alt="dot_leiria"
             />
 
             <img
               className="distrito"
               id="castelobranco"
-              src="imagens/mapa/CasteloBranco.png"
+              src="imagens_index/mapa/CasteloBranco.png"
               alt="CasteloBranco"
             />
             <p className="titulo cb_text" onClick={indisponivel}>
@@ -274,7 +274,7 @@ function Index() {
               className="dot cb_text"
               onClick={indisponivel}
               id="dotcastelo"
-              src="imagens/mapa/dot 3.svg"
+              src="imagens_index/mapa/dot 3.svg"
               alt="dot_castelo"
             />
           </div>
