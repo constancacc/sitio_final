@@ -231,7 +231,7 @@ function Index() {
               src="imagens/mapa/Coimbra.png"
               alt="Coimbra"
             />
-            <Link class="link" to="/ ">
+            <Link class="link" to="/destaques">
               <img
                 className="dot co_text"
                 id="dotcoimbra"
@@ -321,7 +321,7 @@ function Index() {
               </g>
 
               <g id="Coimbra">
-                <Link className="link" to="/">
+                <Link className="link" to="/destaques">
                   <rect x="285" y="450" width="10" height="10" fill="#EE6C59" />
                   <rect x="287.8" y="452.8" width="4" height="4" fill="white" />
                   <text
