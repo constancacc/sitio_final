@@ -32,11 +32,9 @@ export default function App() {
                 {posts.map((post) => {
               
                     return (
-                        
-                        <div
-                            key={post._id}
-                            className='grid-item'
-                        >
+                        <Link to={"/artista/" + post.slug} key={post.slug} className='grid-item'>
+
+                      
                             <img
                                 src={post.metadata.imagem_artista.url}
                                 alt={post.title}
@@ -47,7 +45,8 @@ export default function App() {
                                     <h6>{post.metadata.idade}</h6>
                                 </div>
                             </div>
-                        </div>
+                  
+                        </Link>
                     );
                 })}
             </div>
