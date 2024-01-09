@@ -3,6 +3,14 @@
     display:none;
 }
 
+#botao_coimbra>button{
+position: relative;
+width: 100%;
+padding: 0.3vw 0.5vw;
+
+cursor: pointer;
+}
+
 @media (max-width: 480px) {
   #localButton, #navLinks, #pesquisa_mobile {
         display:none;

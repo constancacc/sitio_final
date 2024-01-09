@@ -32,8 +32,9 @@ function Menu(props) {
           <Link id="logo_mobile" to="/">
             <img src={logo} alt="sitio"></img>
           </Link>
-
+          <Link to="/destaques" id="botao_coimbra">
           <button id="localButton">Coimbra</button>
+          </Link>
           <Link id="pesquisa_mobile" to="/pesquisa">
             <img src={search} alt="search"></img>
           </Link>

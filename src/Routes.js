@@ -16,8 +16,8 @@ function AppRoutes() {
       <Routes>
         {/* */}
 
-        <Route exact path="/index" element={<Index />}></Route>
-        <Route exact path="/" element={<Destaques />}></Route>
+        <Route exact path="/" element={<Index />}></Route>
+        <Route exact path="/destaques" element={<Destaques />}></Route>
         <Route exact path="/galerias" element={<Galerias />}></Route>
         <Route exact path="/galeria/:slug" element={<GaleriaInfo />}></Route>
         <Route exact path="/artistas" element={<Artistas />}></Route>
