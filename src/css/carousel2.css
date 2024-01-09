@@ -18,7 +18,6 @@
 
 .grid-item {
   position: relative;
-   
 }
 
 .caption {
@@ -45,8 +44,11 @@
 
 @media screen and (max-width: 1024px) {
   .image-grid {
-    grid-template-columns: repeat(2, 1fr); 
-    
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  .grid-item .caption{
+    display: block;
   }
 
 }

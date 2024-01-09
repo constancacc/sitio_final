@@ -13,85 +13,24 @@ function Destaques() {
       <Menu page="index" />
 
       <div className="row">
-        <div className="col-lg-1"></div>
-        <div className="row col-lg-11">
+        <div className="col-lg-1 col-xs-1"></div>
+        <div className="row col-lg-11 ">
           <div className="title">
-            <h3 className="galPrin">Galerias Principais
-            <div className="rect rect1" />
+            <h3>Galerias Principais
+              <div className="rect rect1" />
             </h3>
-            
           </div>
         </div>
       </div>
 
       <Carousel1 />
 
-      {/* <Carousel
-                onChange={onChange}
-                onClickItem={onClickItem}
-                onClickThumb={onClickThumb}
-                showArrows={false}
-                infiniteLoop={true}
-                emulateTouch={true}
-                showStatus={false}
-                selectedItem={1}>
-                <div>
-                    <tab className="col-lg-9 tabLink">
-                        <img src={galeria} />
-                        <div className="galeria">
-                            <h4>Nome da Galeria</h4>
-                            <hr style={{ color: '#000000', backgroundColor: '#000000', height: 0.5 }} />
-                            <div className="dados">
-                                <img src={location} alt="location" />
-                                <p>Rua de Miguel Bombarda</p>
-                                <img src={clock} alt="clock" />
-                                <p>Rua de Miguel Bombarda</p>
-                            </div>
-                        </div>
-                    </tab>
-
-                </div>
-
-                <div>
-                    <tab className="col-lg-9 tabLink">
-                        <img src={galeria} />
-                        <div className="galeria">
-                            <h4>Nome da Galeria</h4>
-
-                            <div className="dados">
-                                <img src={location} alt="location" />
-                                <p>Rua de Miguel Bombarda</p>
-                                <img src={clock} alt="location" />
-                                <p>Rua de Miguel Bombarda</p>
-                            </div>
-                        </div>
-                    </tab>
-                </div>
-                <div>
-                    <tab className="col-lg-9 tabLink">
-                        <img src={galeria} />
-
-                        <div className="galeria">
-                            <h4>Nome da Galeria</h4>
-
-                            <div className="dados">
-                                <img src={location} alt="location" />
-                                <p>Rua de Miguel Bombarda</p>
-                                <img src={clock} alt="location" />
-                                <p>Rua de Miguel Bombarda</p>
-                            </div>
-                        </div>
-                    </tab>
-                </div>
-
-            </Carousel> */}
-
       <div className="row">
-        <div className="col-lg-1"></div>
+        <div className="col-lg-1 col-xs-1"></div>
         <div className="row col-lg-11">
           <div className="title">
-            <h3 className="galPrin">Artistas em Destaque
-            <div className="rect rect2"></div>
+            <h3>Artistas em Destaque
+              <div className="rect rect2"></div>
             </h3>
           </div>
         </div>
@@ -100,11 +39,11 @@ function Destaques() {
       <Carousel2 />
 
       <div className="row">
-        <div className="col-lg-1"></div>
+        <div className="col-lg-1 col-xs-1"></div>
         <div className="row col-lg-11">
           <div className="title">
-            <h3 className="galPrin">Exposições em Destaque
-            <div className="rect rect3"></div>
+            <h3>Exposições em Destaque
+              <div className="rect rect3"></div>
             </h3>
           </div>
         </div>

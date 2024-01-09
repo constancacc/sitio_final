@@ -25,21 +25,15 @@
   margin-left: 78%;
 }
 
-.galeria {
-  padding: 0 10%;
+.title{
+  position: relative;
+  display: inline-block;
 }
 
-.dados {
-  display: inline-flex;
-}
+@media screen and (max-width: 2000px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    
+  }
 
-.artistas {
-  width: 100%;
-  background-color: #cee6c0;
-}
-
-.expoDestaque {
-  background-color: #8ab2dd;
-  display: grid;
-  padding: 0;
 }
