@@ -16,9 +16,6 @@ function ArtistaInfo() {
     async function fetchData() {
       try {
         const fetchedArtist = await getArtistBySlug(slug);
-
-        console.log(fetchedArtist);
-
         setArtist(fetchedArtist);
       } catch (error) {
         console.error("Error fetching posts:", error);

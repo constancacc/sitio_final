@@ -16,14 +16,6 @@ export async function getAllArtists() {
   return data.objects;
 }
 
-// export async function getArtistBySlug(artistSlug) {
-//   const data = await cosmic.objects
-//     .findOne({ type: "artistas", slug: artistSlug })
-//     .props("id,slug,title,metadata")
-//     .depth(1);
-//   return data.objects;
-// }
-
 export async function getArtistBySlug(artistSlug) {
   const data = await cosmic.objects
     .findOne({
@@ -33,7 +25,7 @@ export async function getArtistBySlug(artistSlug) {
     .props("id,slug,title,metadata")
     .depth(1);
 
-  return data.object; // Return the retrieved object
+  return data.object;
 }
 
 export async function getAllGalleries() {
@@ -44,10 +36,34 @@ export async function getAllGalleries() {
   return data.objects;
 }
 
+export async function getGalleryBySlug(gallerySlug) {
+  const data = await cosmic.objects
+    .findOne({
+      type: "galerias",
+      slug: gallerySlug,
+    })
+    .props("id,type,slug,title,metadata")
+    .depth(1);
+
+  return data.object;
+}
+
 export async function getAllExhibitions() {
   const data = await cosmic.objects
     .find({ type: "exposicoes" })
     .props("slug,title,metadata")
     .depth(1);
   return data.objects;
+}
+
+export async function getExhibitionsBySlug(exhibitionsSlug) {
+  const data = await cosmic.objects
+    .findOne({
+      type: "exposicoes",
+      slug: exhibitionsSlug,
+    })
+    .props("id,slug,title,metadata")
+    .depth(1);
+
+  return data.object;
 }

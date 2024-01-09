@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
-import { getArtistBySlug } from "../lib/cosmic.js";
+import { getGalleryBySlug } from "../lib/cosmic.js";
 import { useParams } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
+import location from "../imagens/location.svg";
+import clock from "../imagens/Clock.svg";
 import "../css/paginasInfo.css";
 
 function GaleriaInfo() {
   const { slug } = useParams();
-  const [artist, setArtist] = useState({});
+  const [gallery, setGallery] = useState({});
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const fetchedArtist = await getArtistBySlug(slug);
-
-        console.log(fetchedArtist);
-
-        setArtist(fetchedArtist);
+        const fetchedArtist = await getGalleryBySlug(slug);
+        setGallery(fetchedArtist);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -34,39 +34,39 @@ function GaleriaInfo() {
           <div className="col-lg-1 col-xs-1"></div>
           <div className="col-lg-10 col-xs-10">
             <div id="info-container">
-              <div className="row middle-lg">
+              <div className="row">
                 <div className="col-lg-6">
                   <div id="info-titulo">
-                    <h1>{artist.title}</h1>
-                    <div id="info-rect"></div>
+                    <h1>{gallery.title}</h1>
+                    <div
+                      id="info-rect"
+                      className={"info-rect-" + gallery.type}
+                    ></div>
                   </div>
                   <div id="info-description">
-                    <p>{artist.metadata?.biografia}</p>
+                    <p>{gallery.metadata?.sobre_galeria}</p>
                   </div>
-                  <div id="info-imagem1">
-                    <img src={artist.metadata?.imagem1.imagem.url} />
-                    <p>{artist.metadata?.imagem1.legenda}</p>
+                  <div id="info-gallery">
+                    <div id="info-location">
+                      <img src={location} alt="location" />
+                      <p>{gallery.metadata?.localizacao_galeria}</p>
+                    </div>
+                    <div id="info-date">
+                      <img src={clock} alt="clock" />
+                      <p>{gallery.metadata?.horario_galeria}</p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div id="info-imagem2">
-                    <img src={artist.metadata?.imagem2.imagem.url} />
-                    <p>{artist.metadata?.imagem2.legenda}</p>
+                    <img
+                      src={gallery.metadata?.imagem_galeria.url}
+                      onLoad={() => setImageLoaded(true)}
+                    />
+                    {imageLoaded && (
+                      <p>{gallery.metadata?.imagem_galeria.legenda}</p>
+                    )}
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1 col-xs-1"></div>
-        </div>
-        <div className="row">
-          <div className="col-lg-1 col-xs-1"></div>
-          <div className="col-lg-10 col-xs-10">
-            <div className="row end-lg">
-              <div className="col-lg-8">
-                <div id="info-imagem3">
-                  <img src={artist.metadata?.imagem3.imagem.url} />
-                  <p>{artist.metadata?.imagem3.legenda}</p>
                 </div>
               </div>
             </div>
