@@ -43,18 +43,17 @@
 
 @media screen and (max-width: 480px) {
   .carousel-content{
-    height: 700px;
+    height: 650px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .carousel-content{
-    height: 750px;
+  .galeria h3{
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 388px) {
   .carousel-content{
-    height: 800px;
+    height: 700px;
   }
+
+  
 }
