@@ -52,7 +52,7 @@ function Galerias() {
   };
 
   return (
-    <div id="PagDestaques" onMouseMove={imagePosition}>
+    <div onMouseMove={imagePosition}>
       <Menu page="galerias" />
       <div className="lista-galeria">
         {posts.map((post) => (

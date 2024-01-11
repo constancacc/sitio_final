@@ -43,3 +43,9 @@ hr {
   right: 2%;
   padding-top: 1%;
 }
+
+@media screen and (max-width: 480px){
+  .lista-galeria{
+    height: 100%;
+  }
+}
