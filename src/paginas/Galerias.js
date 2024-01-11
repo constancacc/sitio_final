@@ -14,7 +14,7 @@ function Galerias() {
   const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const navigate = useNavigate(); // Replace withRouter with useNavigate
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     async function fetchData() {
@@ -48,7 +48,7 @@ function Galerias() {
   };
 
   const isMobile = () => {
-    return window.innerWidth <= 480; // Adjust the breakpoint as needed
+    return window.innerWidth <= 480; 
   };
 
   return (
