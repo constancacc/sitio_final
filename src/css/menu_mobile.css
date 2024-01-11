@@ -1,4 +1,6 @@
+/*CSS DO MENU*/
 
+/*----------- DESKTOP ---------------*/
 #hamburguer{
     display:none;
 }
@@ -11,8 +13,10 @@ padding: 0.3vw 0.5vw;
 cursor: pointer;
 }
 
+/*----------- MOBILE ---------------*/
 @media (max-width: 480px) {
-    
+
+   /*Destaques*/
    #PagDestaques{
     overflow: hidden;
    } 
@@ -26,6 +30,8 @@ cursor: pointer;
   #localButton, #navLinks, #pesquisa_mobile {
         display:none;
     }
+
+    /*BARRA DE CIMA*/
     #logo_container_mobile{
         width:100vw;
     }
@@ -43,6 +49,7 @@ cursor: pointer;
         top: 2vw;
     }
 
+    /*PÁGINA DO MENU*/
     #gradiente{
        height: 93.3vh;
         background-image: url('../imagens/gradiente.svg');
@@ -52,7 +59,7 @@ cursor: pointer;
 
     #container_lista{
         position: relative;
-        top: 50vw;
+        top: 40vw;
     }
     .separar{
         border-bottom: 1px solid black;

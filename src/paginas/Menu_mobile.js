@@ -1,15 +1,15 @@
 
-import Menu from "../componentes/Menu.js";
-import { Link } from "react-router-dom";
+import Menu from "../componentes/Menu.js";/* componente */
+import { Link } from "react-router-dom";/*links*/
 
-
-import '../css/menu_mobile.css';
+import '../css/menu_mobile.css'; /*css*/
 
 function MenuMobile() {
   return (
     <div id="menucontainer">
       <Menu />
 
+    {/*Menu Mobile */}
     <div id="gradiente">
     <div id="container_lista">
     
@@ -33,11 +33,16 @@ function MenuMobile() {
         </Link>
 
         <Link to={"/pesquisa"}>
-          <div className="row">
+          <div className="row separar">
               <h1 className="position"> pesquisa </h1>
           </div>
         </Link>
 
+        <Link to={"/destaques"}>
+          <div className="row">
+              <h1 className="position"> destaques </h1>
+          </div>
+        </Link>
       </div>
     </div>
 
