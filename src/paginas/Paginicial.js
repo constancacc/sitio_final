@@ -1,9 +1,13 @@
-import "../css/pag_inicial.css";
+/* INDEX DO WEBSITE*/
 
-import { Link } from "react-router-dom";
+import "../css/pag_inicial.css"; /*css*/ 
+
+import { Link } from "react-router-dom";/*importar os links*/
 
 
 function Index() {
+
+  /*quando clica no botão do pop-up ele aparece ou desaparece*/
   function click() {
     let pop_up = document.querySelector("#popup-zona");
     pop_up.classList.toggle("hide");
@@ -11,12 +15,13 @@ function Index() {
     let bot_zonas = document.querySelector(".botao_zonas");
     bot_zonas.classList.toggle("flip");
   }
-
+  /*quando o utilizador clica onde não temos implementação - o site só foi implementado para Coimbra*/
   function indisponivel() {
     alert("indisponivel");
   }
 
   return (
+      /*Logotipo*/
       <div className="container_index">
         <div className="row" id="logo-mapa">
           <svg
@@ -102,9 +107,13 @@ function Index() {
             </defs>
           </svg>
         </div>
+
+        {/*Index Desktop*/}
+
         <div className="row desktop"></div>
 
         <div className="desktop">
+          {/* Menu Index */}
           <div className="row">
             <div className="col-lg-1"></div>
             <div className="col-lg-2">
@@ -140,6 +149,7 @@ function Index() {
             
               </div>
 
+              {/* Pop-up Zona */}
               <div id="popup-zona" className="hide">
                 <span className="zona">
                   <i>centro</i>
@@ -175,7 +185,7 @@ function Index() {
               </div>
             </div>
           </div>
-
+          {/* Mapa Desktop */}
           <div className="row">
             <img
               className="distrito"
@@ -285,12 +295,14 @@ function Index() {
           </div>
         </div>
 
-        <div className="mobile slick-slider" style={{ overflow: "auto" }}>
+        {/*Index Mobile*/}
+        <div className="mobile slick-slider">
+          {/*indicador de zona*/}
           <div className="row">
             <p className="zonas">zona centro</p>
           </div>
-          <div className="row" id="svg-scroll" style={{ overflowX: "auto" }}>
-            {/*<img id="mapa" src="imagens/mapa/mapa_mobile2.svg"  alt="mapa_mobile"/>*/}
+          {/* Mapa Mobile */}
+          <div className="row" id="svg-scroll">
 
             <svg
               id="mapa"
