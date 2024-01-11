@@ -12,6 +12,17 @@ cursor: pointer;
 }
 
 @media (max-width: 480px) {
+    
+   #PagDestaques{
+    overflow: hidden;
+   } 
+   .carousel3 .slick-slider.slick-initialized {
+    height: 110vh;
+  }
+  .carousel3 .slick-dots{
+    bottom:2vh;
+  }
+
   #localButton, #navLinks, #pesquisa_mobile {
         display:none;
     }

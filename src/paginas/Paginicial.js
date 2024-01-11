@@ -1,4 +1,4 @@
-import "../css/index.css";
+import "../css/pag_inicial.css";
 
 import { Link } from "react-router-dom";
 
@@ -285,7 +285,7 @@ function Index() {
           </div>
         </div>
 
-        <div className="mobile" style={{ overflow: "auto" }}>
+        <div className="mobile slick-slider" style={{ overflow: "auto" }}>
           <div className="row">
             <p className="zonas">zona centro</p>
           </div>

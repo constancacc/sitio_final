@@ -235,7 +235,7 @@ right:25vw;
 
 #logo-mapa{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-  margin: 3% auto;
+  
   height: 4.5vh;
 }
 
@@ -243,26 +243,27 @@ right:25vw;
 
 #svg-scroll{
   width: 300vw;
-  height: 92vh;
+  height: 95vh;
 }
 #mapa{
   width:100%;
   position: relative;
-  right: 80vw;
+  
 }
 
 /*indicador de zona*/
 .zonas{
   font-size: 4vw;
-  position: absolute;
+  position: fixed;
   left: 0;
-  
+  top: 5vh;
   z-index: 2;
-  background-color:#EE6C59;
+  background-color: #EE6C59;
   color: white;
   padding: 1vw;
   border-radius: 2vw;
   margin-left: 2vw;
+
 }
 
 }
