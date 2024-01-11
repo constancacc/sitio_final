@@ -109,8 +109,18 @@ function Index() {
             <div className="col-lg-1"></div>
             <div className="col-lg-2">
               <div className="zona_container">
+                <div 
+                style={{
+                  position: "relative"
+                }}>
                 <p className="zonas">Zona Centro</p>
-
+                <img
+                  id="ret_zona"
+                  width="40%"
+                  src="imagens_index/mapa/zona.svg"
+                  alt="zona"
+                />
+                </div>
                 <svg
                   className="botao_zonas"
                   onClick={click}
@@ -127,12 +137,7 @@ function Index() {
                     stroke-width="4"
                   />
                 </svg>
-                <img
-                  id="ret_zona"
-                  width="40%"
-                  src="imagens_index/mapa/zona.svg"
-                  alt="zona"
-                />
+            
               </div>
 
               <div id="popup-zona" className="hide">
