@@ -1,3 +1,8 @@
+/*CSS DA PESQUISA*/
+
+/*----------- DESKTOP ---------------*/
+
+/*LISTA*/
 .list-element h1 {
     padding: 0 2%;
   }
@@ -20,6 +25,8 @@
     display:block;
   }
 
+
+  /*BARRA DE PESQUISA*/
  .barra_pesquisa{
   background-color: #8AB2DD;
   padding: 1vw;
@@ -44,7 +51,6 @@
   position: relative;
   bottom: 2.3vh;
   left: -0.5vw;
-  
 
  }
 
@@ -61,6 +67,8 @@
   overflow-y: auto;
   overflow-x: hidden;
  }
+
+ /*----------- MOBILE ---------------*/
  @media (max-width: 480px) {
 
   #resultados_pesquisa{
@@ -73,17 +81,17 @@
     width: 100%;
   }
 
+  #icone_pesquisa{
+    position: absolute;
+    bottom: 4vw;
+    left: 4.5vw;
+  }
 
-    #icone_pesquisa{
-      position: absolute;
-      bottom: 4vw;
-      left: 4.5vw;
+  .barra_pesquisa{
+    bottom:0;
+    width:80%;
+    right: -12vw;
+    padding: 2%;
     }
 
-    .barra_pesquisa{
-      bottom:0;
-      width:80%;
-      right: -12vw;
-      padding: 2%;
-    }
  }

@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
-import { getAllArtists, getAllGalleries } from "../lib/cosmic.js";
-import { Link } from "react-router-dom";
+import { getAllArtists, getAllGalleries } from "../lib/cosmic.js"; /* info do cosmic*/
+import { Link } from "react-router-dom";/*links*/
 
+/*componentes*/
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
 
-import search from "../imagens/search2.svg";
+import search from "../imagens/search2.svg"; /*imagem*/
 
-import "../css/pesquisa.css";
+import "../css/pesquisa.css"; /*css*/
 
 
 
 function Pesquisa() {
+
   const [posts, setPosts] = useState([]);
   const [value, setValue] = useState("");
 
   const onChange = (event) => {
     setValue(event.target.value);
   };
-
+  /*ir buscar a informação de galerias e artistas e combinar*/
   useEffect(() => {
     async function fetchData() {
       try {
@@ -38,6 +40,7 @@ function Pesquisa() {
     fetchData();
   }, []);
 
+  /* pesquisa */
   const filteredPosts = posts.filter((post) => {
     const searchTerm = value.toLowerCase();
     const title = post.title.toLowerCase();
@@ -48,7 +51,7 @@ function Pesquisa() {
   return (
     <div id="PagDestaques">
       <Menu page="index" />
-
+      {/* search bar */}
       <div className="row">
         <div className="searchContainer">
           <img id="icone_pesquisa" src={search} alt="search"></img>
@@ -66,6 +69,8 @@ function Pesquisa() {
         </div>
       </div>
       <div id="resultados_pesquisa">
+
+      {/* mostrar os resultados*/}
       {value &&
         filteredPosts.map((post) => (
           console.log(post),
