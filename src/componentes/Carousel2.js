@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getAllArtists } from "../lib/cosmic.js";
+import { getAllArtists } from "../lib/cosmic.js";//ir buscar os artistas
 
 import { Link } from "react-router-dom";
 
+//segundo carrossel de imagens da páginas dos destaques
 import '../css/carousel2.css';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
                 const fetchedPosts = await getAllArtists();
                 console.log("Fetched Posts:", fetchedPosts);
 
+                //ir buscar os artistas que estão em destaque 
                 const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
 
                 setPosts(destaquesPosts);
@@ -30,7 +32,7 @@ export default function App() {
         <div className='image-gallery-container'>
             <div className='image-grid'>
                 {posts.map((post) => {
-
+                    {/*mostrar as inforações dos artistas em destaque*/}
                     return (
                         <Link to={"/artista/" + post.slug}
                             key={post.slug}

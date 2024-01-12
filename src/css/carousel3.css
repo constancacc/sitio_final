@@ -1,7 +1,10 @@
+/*css do carrossel 3
+ocupa 100% da página*/
 .slick-slider {
   width: 100%;
 }
 
+/*estilo de cada slide*/
 .carousel-content3 {
   width: 97%;
   background-color: #8AB2DD;
@@ -9,12 +12,15 @@
   padding-bottom: 15%;
 }
 
+/*imagem da exposição*/
 .exposicao {
   position: relative;
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
+
+/*dados da exposição*/
 
 .galeria3 {
   padding: 0 10%;

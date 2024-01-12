@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { getAllGalleries } from "../lib/cosmic.js";
+import { getAllGalleries } from "../lib/cosmic.js";//ir buscar as galerias
 
 import { Link } from "react-router-dom";
 
 import React from "react";
+
+//uso do slider do react
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,6 +14,8 @@ import "../css/carousel1.css";
 import location from "../imagens/location.svg";
 import clock from "../imagens/Clock.svg";
 import Divider from "./Divider.js";
+
+//primeiro carrossel da página de destaques
 
 const Carousel = () => {
   const settings = {
@@ -33,7 +37,7 @@ const Carousel = () => {
       try {
         const fetchedPosts = await getAllGalleries();
         console.log("Fetched Posts:", fetchedPosts);
-
+        //ir buscar as galerias que estão em destaque
         const destaquesPosts = fetchedPosts.filter(post => post.metadata.destaque === true);
 
         setPosts(destaquesPosts);
@@ -49,6 +53,7 @@ const Carousel = () => {
   return (
 
     <Slider {...settings}>
+      {/*mostrar as informações das galerias em destaque*/}
       {posts.map((post) => (
         <Link to={"/galeria/" + post.slug} className="button-link">
           <div key={post.id} className="carousel-item">
@@ -70,7 +75,6 @@ const Carousel = () => {
       ))}
 
     </Slider>
-
 
   );
 };

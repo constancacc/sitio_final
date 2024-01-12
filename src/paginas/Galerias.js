@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllGalleries } from "../lib/cosmic.js";
+import { getAllGalleries } from "../lib/cosmic.js"; //ir buscar todas as galerias
 import { Link, useNavigate } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
@@ -16,7 +16,7 @@ function Galerias() {
   const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //usar em mobile
 
   useEffect(() => {
     async function fetchData() {
@@ -38,13 +38,13 @@ function Galerias() {
   }, []);
 
   const imagePosition = (event) => {
-    setMousePosition({ x: event.clientX, y: event.clientY });
+    setMousePosition({ x: event.clientX, y: event.clientY }); //posicao da imagem
   };
 
-  const handleClick = (post) => {
-    if (isMobile()) {
+  const handleClick = (post) => {//quando clica na galeria
+    if (isMobile()) {//se for mobile vai diretamente para a pagina da galeria
       navigate("/galeria/" + post.slug);
-    } else {
+    } else {//se não for mobile mostra dados
       setSelectedIndex(post.id);
     }
   };
@@ -60,9 +60,8 @@ function Galerias() {
         {posts.map((post) => (
           <div
             key={post.id}
-            className={`row galeria-list-element ${
-              selectedIndex === post.id ? "clicked" : ""
-            }`}
+            className={`row galeria-list-element ${selectedIndex === post.id ? "clicked" : ""
+              }`}
             onMouseEnter={() => setHoveredIndex(post.id)}
             onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => handleClick(post)}
@@ -80,7 +79,7 @@ function Galerias() {
                 />
               )}
               <h1>{post.title}</h1>
-
+              {/*se não for mobile, clica e aparece a informação*/}
               {selectedIndex === post.id && (
                 <div className="galeria-list-element-expanded">
                   <div className="galeria-list-content-expanded">
@@ -88,6 +87,7 @@ function Galerias() {
                     <p>{post.metadata.localizacao_galeria}</p>
                     <img src={clock} alt="clock" className="icons" />
                     <p>{post.metadata.horario_galeria}</p>
+                    {/*se não for mobile, clica para ir para a pagina da galeria */}
                     <Link to={"/galeria/" + post.slug} className="button-link">
                       <img src={arrow} alt="arrow" className="button" />
                     </Link>

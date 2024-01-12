@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAllExhibitions } from "../lib/cosmic.js";
+import { getAllExhibitions } from "../lib/cosmic.js";//ir buscar as exposições
 
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,8 @@ import "../css/carousel3.css";
 import location from "../imagens/location.svg";
 import clock from "../imagens/Clock.svg";
 import Divider from "./Divider.js";
+
+//terceiro carrossel da página dos destaques
 
 const Carousel = () => {
   const [posts, setPosts] = useState([]);
@@ -31,12 +33,13 @@ const Carousel = () => {
   function calculateSlidesToShow() {
     const windowWidth = window.innerWidth;
 
+    //redimensionar a quantidade de slides a mostrar
     if (windowWidth <= 767) {
-      return 1; // Small screens
+      return 1;
     } else if (windowWidth <= 1300) {
       return 2;
     } else {
-      return 3; // Larger screens
+      return 3;
     }
   }
 
@@ -58,6 +61,7 @@ const Carousel = () => {
         const fetchedPosts = await getAllExhibitions();
         console.log("Fetched Posts:", fetchedPosts);
 
+        //ir buscar as exposições em destaque
         const destaquesPosts = fetchedPosts.filter(
           (post) => post.metadata.destaque === true,
         );
@@ -86,6 +90,7 @@ const Carousel = () => {
                     className="exposicao"
                   />
                   <div className="galeria3">
+                    {/*redimensionar dependendo dos slides a serem mostrados*/}
                     {slidesToShow <= 2 ? (
                       <h4>{post.title}</h4>
 
@@ -94,26 +99,18 @@ const Carousel = () => {
                     )}
                   </div>
                   <Divider />
-         
-
-                        <div className="dados3">
-
-                          <div className="dados-itens3Location">
-                            <img src={location} alt="location" className="icons" />
-                            <p>{post.metadata.localizacao}</p>
-                          </div>
-
-                          <div className="dados-itens3">
-                            <img src={clock} alt="clock" className="icons" />
-                            <p>{post.metadata.horario}</p>
-                          </div>
-
-                        </div>
-
-                      </div>
-
+                  <div className="dados3">
+                    <div className="dados-itens3Location">
+                      <img src={location} alt="location" className="icons" />
+                      <p>{post.metadata.localizacao}</p>
                     </div>
-
+                    <div className="dados-itens3">
+                      <img src={clock} alt="clock" className="icons" />
+                      <p>{post.metadata.horario}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Link>
         </div>

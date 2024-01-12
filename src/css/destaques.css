@@ -1,5 +1,7 @@
 
+/*css da página de destaques*/
 
+/*retangulos de cor*/
 .rect{
   width: 160px;
   height: 52px;
@@ -34,8 +36,6 @@
     margin-bottom: 5%;
   }
 }
-
-
 
 @media screen and (max-width: 2000px) {
   .image-grid {

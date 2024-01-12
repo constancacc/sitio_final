@@ -1,13 +1,17 @@
+/*css do carrossel 2
+cor de fundo*/
 .image-gallery-container {
   background-color: #CEE6C0;
 }
 
+/*fazer a grid para encaixar as imagens*/
 .image-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 16px;
 }
 
+/*estilo da imagem dentro de cada espaço*/
 .image-grid img {
   width: 100%;
   height: 100%;
@@ -20,6 +24,7 @@
   position: relative;
 }
 
+/*texto que aparece quando faz hover*/
 .caption {
   display: none;
   position: absolute;
@@ -41,10 +46,23 @@
   display: block;
 }
 
+/*redimensionar a grid*/
 
 @media screen and (max-width: 1024px) {
   .image-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .grid-item .caption .textCaption h5 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .grid-item .caption {
     display: block;
@@ -55,19 +73,5 @@
 
   .grid-item .caption .textCaption h5 {
     margin-top: 5%;
-    /* Ajuste conforme necessário para reduzir o espaço */
-  }
-}
-
-@media screen and (max-width: 830px) {
-  .grid-item .caption .textCaption h5 {
-    font-size: 1rem;
-    /* Ajuste conforme necessário para reduzir o espaço */
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .image-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
