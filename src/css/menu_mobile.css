@@ -21,10 +21,10 @@ cursor: pointer;
     overflow: hidden;
    } 
    .carousel3 .slick-slider.slick-initialized {
-    height: 110vh;
+    height: 100vh;
   }
   .carousel3 .slick-dots{
-    bottom:2vh;
+    bottom:15vh;
   }
 
   #localButton, #navLinks, #pesquisa_mobile {
