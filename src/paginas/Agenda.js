@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getAllExhibitions } from "../lib/cosmic.js";
+import { getAllExhibitions } from "../lib/cosmic.js"; // TODAS AS EXPOSIÇÕES
 import { Link } from "react-router-dom";
 
+// IMPORTS CAROUSEL
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +16,7 @@ function Agenda() {
   const [posts, setExhibitions] = useState([]);
   const [activeMonth, setActiveMonth] = useState(null);
 
+  // FETCH DAS EXPOSIÇÕES
   useEffect(() => {
     async function fetchData() {
       try {
@@ -22,16 +24,18 @@ function Agenda() {
 
         setExhibitions(fetchedPosts);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
     fetchData();
   }, []);
 
+  // ALTERNAR O MÊS ATIVO
   const toggleCarousel = (month) => {
     setActiveMonth(month === activeMonth ? null : month);
   };
 
+  // DEFINIÇÕES CAROUSEL
   const settings = {
     centerMode: true,
     infinite: true,
@@ -45,6 +49,7 @@ function Agenda() {
     autoplaySpeed: 5000,
   };
 
+  // MESES PARA LISTA
   const months = [
     "janeiro",
     "fevereiro",
@@ -60,6 +65,7 @@ function Agenda() {
     "dezembro",
   ];
 
+  // FILTRAR E FORMATAR DATA
   const filterExhibitionsByMonth = (exhibitions, targetMonth) => {
     return exhibitions.filter((exhibition) => {
       const exhibitionStartDate = exhibition.metadata.data_inicio;
@@ -75,7 +81,7 @@ function Agenda() {
       const startMonth = parseInt(exhibitionStartMonth);
       const endMonth = parseInt(exhibitionEndMonth);
 
-      return targetMonth >= startMonth && targetMonth <= endMonth;
+      return targetMonth >= startMonth && targetMonth <= endMonth; // VERIFICAR EM QUE MÊS SE POSICIONA
     });
   };
 
@@ -95,7 +101,7 @@ function Agenda() {
             </div>
           </div>
 
-          {activeMonth === month && (
+          {activeMonth === month && ( //MOSTRAR APENAS O MÊS ATIVO (CAROUSEL)
             <>
               <div className="row">
                 <div className="col-xs-12">

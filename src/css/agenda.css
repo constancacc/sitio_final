@@ -1,7 +1,10 @@
+/*CSS DA PÀGINA AGENDA*/
+/* MENSAGEM (NÃO FORAM ENCONTRADAS EXPOSIÇÕES) */
 #agenda-mensagem {
   text-align: center;
 }
 
+/* ELEMENTO DA LISTA */
 .agenda-list-element {
   cursor: pointer;
 }
@@ -14,16 +17,19 @@
   background-color: #8ab2dd;
 }
 
+/* CAROUSEL ATIVO */
 .agenda-carousel {
   padding: 3rem 0;
 }
 
+/* IMAGENS CARROSEL */
 .agenda-imagem {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
+/* NOME DA EXPOSIÇÃO */
 .agenda-nome-exposicao {
   padding: 0 2rem;
   text-align: center;
@@ -34,6 +40,7 @@
   padding: 0;
 }
 
+/* COR DO MÊS ATIVO */
 .active-month {
   background-color: #8ab2dd;
 }

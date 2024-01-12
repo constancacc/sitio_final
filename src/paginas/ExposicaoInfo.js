@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getExhibitionsBySlug } from "../lib/cosmic.js";
+import { getExhibitionsBySlug } from "../lib/cosmic.js"; // EXPOSIÇÃO CORRESPONDENTE À SLUG
 import { useParams } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
@@ -13,6 +13,7 @@ function ExposicaoInfo() {
   const { slug } = useParams();
   const [exhibition, setExhibition] = useState({});
 
+  // FETCH DA EXPOSIÇÃO CORRESPONDENTE
   useEffect(() => {
     async function fetchData() {
       try {
@@ -22,11 +23,11 @@ function ExposicaoInfo() {
 
         setExhibition(fetchedExhibitions);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
     fetchData();
-  }, [slug]);
+  }, [slug]); // NOVO FETCH QUANDO A SLUG É ALTERADA
 
   return (
     <div id="PagArtistaInfo">

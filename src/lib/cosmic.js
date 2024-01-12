@@ -1,13 +1,13 @@
-// Import
 import { createBucketClient } from "@cosmicjs/sdk";
 
-// Authenticate
+// AUTENTICAÇÃO
 const cosmic = createBucketClient({
   bucketSlug: "sitio-production-f54d2e30-938a-11ee-bad3-c399e8060022",
   readKey: "Cp7nTIDRVoAA7k6bhFe2nOrRDzhFdYsP7KKUIuqfaBK8fMdlOu",
   writeKey: "GZBEt3ucsQJ76GkJtRiPxluUVbi7IkgNec6lPhL77NHPpo2tlc",
 });
 
+// OBTER TODOS OS ARTISTAS (PARA LISTA)
 export async function getAllArtists() {
   const data = await cosmic.objects
     .find({ type: "artistas" })
@@ -16,6 +16,7 @@ export async function getAllArtists() {
   return data.objects;
 }
 
+// OBTER O ARTISTA CORRESPONDENTE À SLUG
 export async function getArtistBySlug(artistSlug) {
   const data = await cosmic.objects
     .findOne({
@@ -28,6 +29,7 @@ export async function getArtistBySlug(artistSlug) {
   return data.object;
 }
 
+// OBTER TODOS AS GALERIAS (PARA LISTA)
 export async function getAllGalleries() {
   const data = await cosmic.objects
     .find({ type: "galerias" })
@@ -36,6 +38,7 @@ export async function getAllGalleries() {
   return data.objects;
 }
 
+// OBTER A GALERIA CORRESPONDENTE À SLUG
 export async function getGalleryBySlug(gallerySlug) {
   const data = await cosmic.objects
     .findOne({
@@ -48,6 +51,7 @@ export async function getGalleryBySlug(gallerySlug) {
   return data.object;
 }
 
+// OBTER TODOS AS EXPOSIÇÕES (PARA LISTA)
 export async function getAllExhibitions() {
   const data = await cosmic.objects
     .find({ type: "exposicoes" })
@@ -56,6 +60,7 @@ export async function getAllExhibitions() {
   return data.objects;
 }
 
+// OBTER A EXPOSIÇÃO CORRESPONDENTE À SLUG
 export async function getExhibitionsBySlug(exhibitionsSlug) {
   const data = await cosmic.objects
     .findOne({

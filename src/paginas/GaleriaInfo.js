@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getGalleryBySlug } from "../lib/cosmic.js";
+import { getGalleryBySlug } from "../lib/cosmic.js"; // GALERIA CORRESPONDENTE À SLUG
 import { useParams } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
@@ -12,19 +12,20 @@ import "../css/paginasInfo.css";
 function GaleriaInfo() {
   const { slug } = useParams();
   const [gallery, setGallery] = useState({});
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false); // CARREGAR LEGENDAS APENAS QUANDO IMAGEM É CARREGADA
 
+  // FETCH DA GALERIA CORRESPONDENTE
   useEffect(() => {
     async function fetchData() {
       try {
         const fetchedArtist = await getGalleryBySlug(slug);
         setGallery(fetchedArtist);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
     fetchData();
-  }, [slug]);
+  }, [slug]); // NOVO FETCH QUANDO A SLUG É ALTERADA
 
   return (
     <div id="PagArtistaInfo">

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getAllGalleries } from "../lib/cosmic.js";
 import { Link, useNavigate } from "react-router-dom";
+
 import Menu from "../componentes/Menu.js";
 import Footer from "../componentes/Footer.js";
+
 import location from "../imagens/location.svg";
 import clock from "../imagens/Clock.svg";
 import arrow from "../imagens/arrow.svg";
@@ -14,7 +16,7 @@ function Galerias() {
   const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -29,7 +31,7 @@ function Galerias() {
 
         setPosts(fetchedPosts);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
     fetchData();
@@ -48,7 +50,7 @@ function Galerias() {
   };
 
   const isMobile = () => {
-    return window.innerWidth <= 480; 
+    return window.innerWidth <= 480;
   };
 
   return (

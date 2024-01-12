@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllArtists } from "../lib/cosmic.js";
+import { getAllArtists } from "../lib/cosmic.js"; // TODOS OS ARTISTAS
 import { Link } from "react-router-dom";
 
 import Menu from "../componentes/Menu.js";
@@ -8,30 +8,32 @@ import Footer from "../componentes/Footer.js";
 import "../css/artistas.css";
 
 function Artistas() {
-  const [posts, setPosts] = useState([]);
+  const [artists, setArtists] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
+  const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 }); // POSIÇÃO DO RATO | VALOR INICIAL PARA ESCONDER IMAGENS
 
+  // FETCH DOS ARTISTAS
   useEffect(() => {
     async function fetchData() {
       try {
         const fetchedPosts = await getAllArtists();
 
-        fetchedPosts.forEach((post) => {
+        fetchedPosts.forEach((artist) => {
           const img = new Image();
-          img.src = post.metadata.imagem_artista.url;
+          img.src = artist.metadata.imagem_artista.url;
         });
 
         console.log(fetchedPosts);
 
-        setPosts(fetchedPosts);
+        setArtists(fetchedPosts);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
     fetchData();
   }, []);
 
+  // POSIÇÃO DA IMAGEM RELATIVA AO RATO
   const imagePosition = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
@@ -39,19 +41,19 @@ function Artistas() {
   return (
     <div id="PagArtistas" onMouseMove={imagePosition}>
       <Menu page="artistas" />
-      {posts.map((post) => (
-        <Link to={"/artista/" + post.slug} key={post.slug}>
+      {artists.map((artist) => (
+        <Link to={"/artista/" + artist.slug} key={artist.slug}>
           <div
-            key={post.id}
+            key={artist.id}
             className="row artista-list-element"
-            onMouseEnter={() => setHoveredIndex(post.id)}
+            onMouseEnter={() => setHoveredIndex(artist.id)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div className="col-xs-12">
-              {hoveredIndex === post.id && (
+              {hoveredIndex === artist.id && (
                 <img
                   className="artista-imagem"
-                  src={post.metadata.imagem_artista.url}
+                  src={artist.metadata.imagem_artista.url}
                   alt="imagem-artista"
                   style={{
                     top: mousePosition.y,
@@ -59,7 +61,7 @@ function Artistas() {
                   }}
                 />
               )}
-              <h1>{post.title}</h1>
+              <h1>{artist.title}</h1>
               <hr />
             </div>
           </div>

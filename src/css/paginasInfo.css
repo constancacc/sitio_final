@@ -1,3 +1,5 @@
+/*CSS DAS PÀGINAS DE INFORMAÇÃO*/
+/* TITULO (NOME ARTISTA / GALERIA / EXPOSIÇÃO) */
 #info-titulo {
   position: relative;
   display: inline-block;
@@ -26,17 +28,19 @@
   background-color: #8ab2dd;
 }
 
+/* PARAGRAFO DESCRITIVO */
 #info-description {
   margin: 2rem 0 8rem 0;
 }
 
 @media screen and (min-width: 768px) {
   #info-description.exposicoes > p {
-    column-count: 2;
+    column-count: 2; /* NÚMERO DE COLUNAS DO PARAGRAFO */
     column-gap: 2rem;
   }
 }
 
+/* IMAGENS RELACIONADAS */
 #info-imagem1,
 #info-imagem2,
 #info-imagem3 {
@@ -49,6 +53,7 @@
   margin-top: 5rem;
 }
 
+/* LEGENDA IMAGENS */
 #info-imagem1 > p,
 #info-imagem2 > p,
 #info-imagem3 > p {
@@ -71,6 +76,7 @@
   margin-top: 5rem;
 }
 
+/* INFORMAÇÃO DE DATA E LOCAL */
 #info-location,
 #info-date {
   display: flex;
