@@ -38,6 +38,10 @@
   display: inline-flex;
 }
 
+.icons {
+  margin: 0 1rem;
+}
+
 /* BOTÃO DE REDIRECT */
 .button {
   position: absolute;
