@@ -1,8 +1,7 @@
-
 /*css da página de destaques*/
 
 /*retangulos de cor*/
-.rect{
+.rect {
   width: 160px;
   height: 52px;
   z-index: -1;
@@ -26,29 +25,28 @@
   margin-left: 78%;
 }
 
-.title{
+.title {
   position: relative;
   display: inline-block;
 }
 
 @media screen and (max-width: 881px) {
-  .carousel1{
+  .carousel1 {
     margin-bottom: 5%;
   }
 }
 
 @media screen and (max-width: 2000px) {
   .image-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 480px) {
-
-  .rect2{
+  .rect2 {
     margin-left: 20%;
   }
-  .rect3{
+  .rect3 {
     margin-top: -7%;
     margin-left: 22%;
   }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAllExhibitions } from "../lib/cosmic.js";//ir buscar as exposições
+import { getAllExhibitions } from "../lib/cosmic.js"; //ir buscar as exposições
 
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,6 @@ const Carousel = () => {
 
   const settings = {
     centerMode: true,
-    centerPadding: "20%",
     infinite: true,
     slidesToShow: slidesToShow,
     speed: 1500,
@@ -63,13 +62,13 @@ const Carousel = () => {
 
         //ir buscar as exposições em destaque
         const destaquesPosts = fetchedPosts.filter(
-          (post) => post.metadata.destaque === true,
+          (post) => post.metadata.destaque === true
         );
         console.log("Destaques Posts:", destaquesPosts);
 
         setPosts(destaquesPosts);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching:", error);
       }
     }
 
@@ -90,15 +89,11 @@ const Carousel = () => {
                     className="exposicao"
                   />
                   <div className="galeria3">
-                    {/*redimensionar dependendo dos slides a serem mostrados*/}
-                    {slidesToShow <= 2 ? (
-                      <h4>{post.title}</h4>
-
-                    ) : (
-                      <h3>{post.title}</h3>
-                    )}
+                    <h3>{post.title}</h3>
                   </div>
+
                   <Divider />
+
                   <div className="dados3">
                     <div className="dados-itens3Location">
                       <img src={location} alt="location" className="icons" />
@@ -114,7 +109,6 @@ const Carousel = () => {
             </div>
           </Link>
         </div>
-
       ))}
     </Slider>
   );
