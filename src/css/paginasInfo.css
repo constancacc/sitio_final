@@ -10,8 +10,8 @@
 
 #info-rect {
   position: absolute;
-  top: 50%;
-  right: 50%;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 52px;
   background-color: #cee6c0;
